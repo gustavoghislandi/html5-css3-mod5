@@ -1,3 +1,50 @@
 O que vamos aprender no módulo 5?
 
-[Primeiro commit]
+Teoria, prática e exercício de Flexbox e Grid Layout. Além de um Projeto Final.
+
+Flexbox.
+
+Flexbox trabalha com "container" (box model), que é um elemento pai, que tem vários elementos filhos.
+
+Isso faz com que os filhos se comportem adaptados ao tamanho da tela ou janela (adaptados ao container).
+
+Por exemplo, se o tamanho do container diminuir em largura, os elementos filhos irão se adaptar. 
+
+Isso é muito bom para não ter aquela rolagem lateral nas páginas.
+
+O Flexbox é UNIDIMENSIONAL. Ele só trabalha ou na horizontal ou na vertical.
+
+É possível também esticar os elementos caso a interface cresça mais.
+
+Também é possível modificar o eixo principal da caixa flexível. Por exemplo, se você está apresentando os elementos dentro da caixa na horizontal, em uma página desktop, em seguida, ao ir para um dispositivo mobile (de menor tamanho de tela), alinhar esses elementos na vertical para uma melhor apresentação.
+
+Ele trabalha com direção primária, secundária, alternativa, eixos..
+
+----
+
+Grid Layout.
+
+Diferentemente do Flexbox, o Grid Layout é MULTIDIMENSIONAL.
+
+Também usa uma caixa/container "flexível" (até certo ponto).
+
+Com ele você cria uma grade, um layout do tamanho que você definir, para poder estrutuar os elementos dentro dessa estrutura de grade.
+
+Com isso, você consegue reposicionar os elementos.
+Exemplo:
+
+Em um container de 5 blocos de largura por 4 blocos de altura, com 6 elemento para colocar nele, você pode:
+ - fazer o primeiro elemento ocupar a primeira linha inteira (ou seja, 5 blocos na horizontal);
+ - fazer o segundo elemento ocupar os próximos 2 blocos na vertical;
+ - fazer o terceiro elemento ocupar um quadrado de 2x2 blocos.
+ - fazer o quarto elemento ocupar os próximos 2 blocos na vertical;
+ - fazer o quinte elemento ocupar os próximos 2 blocos na vertical; (ou o quarto e o quinto com 2 blocos na horizontal cada, vai de você)
+- fazer o sexto elemento ocupar a última linha inteira (ou seja, 5 blocos na horizontal);
+
+[Isso lembra a estruturação de um table]
+
+Existem outras tecnologias, como o Bootstrap, porém com ele há código a mais e coisas a adicionar ao site. Com o Grid Layout não há necessidade.
+
+----
+
+Ao final ele falou sobre a emissão de certificados e do Estudonauta.
