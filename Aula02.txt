@@ -1,0 +1,94 @@
+Primeiros passos com Flexbox CSS
+
+Flexbox é chamado Flexible Boxes ou, mais precisamente, de CSS Flexible Box Module Level 1.
+
+Nos modelos anteriores, a responsividade do site ficava um tanto quanto limitada às media queries.
+
+Ele surgiu em 2017, assim como o Grid Layout, que se chama CSS Grid Layout Module Level 1/2.
+
+Não é porque hoje em dia tem o Flexbox ou o Grid Layout que você não pode usar o restante das formas, na verdade, você pode integrar todas essas formas (como, por exemplo, as que vieram lá do CSS 2.1, como o Block Layout, Inline Layout, Table Layout, Posicioned Layout). É um erro muito grande achar que tudo que você for fazer tem que ser somente com Flexbox ou Grid Layout [apesar disso, até onde me recordo, o React Native usa só Flexbox].
+
+--
+
+Quando vocẽ pensar em Flexbox, você vai pensar em:
+
+"Qual é o formato da água?"
+
+O formato da água depende do recipiente (se uma jarra, uma garrafa ou um copo, por exemplo).
+
+É a mesma coisa com as caixas flexíveis do Flexbox.
+
+Então, qual o tamanho de uma caixa? Vai depender.
+
+Se você quiser criar um layout em que uma caixa tem que ter exatamente aquele tamanho e não pode mudar, então o Flexbox não seria para solucionar esse problema.
+
+Ele é bom para resolver problemas onde as caixas não estão se encaixando.
+
+Ele cria um layout flexível para adaptar o conteúdo para você.
+
+Com isso, voltando à resposta da pergunta, substitua "recipiente" por "container" (ou contêiner).
+
+--
+
+Flexbox trabalha com caixas.
+
+O conteúdo e o container da caixa vão definir o tamanho e o formato da caixa.
+
+Dentro desse container flexível, nós podemos criar outros elementos/containers dentro, que nós vamos chamar de "item".
+
+O grande diferencial do Flexbox é buscar evitar o transbordamento das caixas internas em relação ao container pai. Isso acontece muito quando o tamanho da tela muda. Exatamente para manter o design fluido que surgiram as flexible boxes.
+
+Hoje em dia, a grande maioria dos navegadores já é compatível com Flexbox. Talvez alguma smartTV mais não seja.
+
+Com um:
+
+    display: flex;
+    flex: auto;
+
+as caixas vão se tornar fluidas. Vão reduzir ou aumentar proporcionalmente ao container pai.
+
+Se você não quer que "quebre" o layout ou mude o tamanho, o Flexbox não é pra você.
+
+Se você aumentar o tamanho do container para baixo, dá para escolher se as caixas vão ficar em cima, no meio, embaixo, espichadas (que é o comportamento normal, a propriedade strech já estando ligada - que estica e encolhe dinamicamente).
+
+É possível também, por exemplo, num container que seja 4 unidades de largura por 1 unidade de altura, ao estreitar o container e ele ficar com 3 de largura, a 4ª caixa vá para baixo da primeira, ou ainda, que ela ocupe toda o espaço de baixo (equivalente a 3 unidades de largura e 1 de altura).
+
+Para além de containers e organização horizontal, é possível trabalhar também com caixas verticalmente alinhadas.
+
+Por isso você deve se perguntar:
+
+"Quem é o pai?"
+
+Que é exatamente o container.
+
+--
+
+ATENÇÃO:
+
+O display: flex não vai em todas as caixas e todas as CSS, cuidado com isso! 
+
+Basicamente, você só vai colocar display: flex no container.
+
+Os itens não vão receber a configuração de display: flex.
+
+Eles vão receber outras configurações, que são as configurações de item.
+--
+
+Então é preciso saber diferenciar que o "flex-container" é o container pai.
+
+E os "flex-items" são os itens (items), que são os filhos, os elementos internos.
+
+---
+Parte prática.
+
+Perceba que as divs já vão se adaptando responsivamente às mudanças no tamanho da tela ao usar o Flexbox.
+
+---
+
+No container pai, principal coisa é colocar nele:
+
+    display: flex;
+
+E no filho, para adaptações fluidas:
+
+    flex: auto;
