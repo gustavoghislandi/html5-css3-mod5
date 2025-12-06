@@ -1,0 +1,47 @@
+Direções e Eixos Flexbox CSS
+
+Propriedade flex-direction.
+
+Estamos falando do flex-container, do pai.
+
+Esta é a configuração padrão. É em direção horizontal, com sentido para o lado de leitura do idioma (então em hebraico seria da direita para esquerda):
+
+    flex-direction: row;
+
+Já no sentido reverso/contrário:
+
+    flex-direction: row-reverse;
+
+Na vertical (cima para baixo> Não acredito que tenha idioma de baixo para cima.):
+
+    flex-direction: column;
+
+Novamente, em sentido reverso/contrário, empilhados de baixo para cima:
+
+    flex-direction: column-reverse;
+
+---
+
+Resumidamente é:
+
+flex-direction no pai, e tem os valores que dão direção e sentido sendo, row e column (igual uma table) e o reverse, que muda para o sentido contrário.
+
+----------
+
+Eixos. 
+
+Quando você escolhe a direção, são criados dois eixos muito importantes.
+
+Existem basicamente dois eixos.
+
+O eixo principal é chamado de main-axis. Ele tem dois pontos: o main-start e o main-end.
+
+Também há o eixo transversal, que é chamado de cross-axis. Ele também tem dois pontos: o cross-start e o cross-end.
+
+Então, em um flex-direction: row, ficaria o main-axis cortando o container-pai no centro dele horizontalmente, enquanto o cross-axis corta cada item no centro perpendicularmente (ou seja, na vertical nesse caso). O start de cada um é no início e o end no fim. Ou seja, nesse exemplo, main-start fica na esquerda, main-end na direita, enquanto cross-start fica no topo e o cross-end na parte de baixo.
+
+---
+
+Resumidamente:
+
+O flex-direction manda e determina o main-axis e o cross-axis. O main-axis é o que o flex-direction por padrão ou principal, enquanto o cross-axis é o perpendicular a ele. Ambos os axis têm start e end. E seguem, por padrão, o padrão de leitura. No nosso caso, esquerda para direita e cima para baixo. Então, se o flex-direction está com valor column, o main-axis é vertical, de cima para baixo, e o cross-axis é da esquerda pra direita.
