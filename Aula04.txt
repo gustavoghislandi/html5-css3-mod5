@@ -1,0 +1,31 @@
+Empacotamento e fluxo no Flexbox CSS
+
+Ainda focando no container-pai.
+
+Propriedade flex-wrap. Por padrão está com o valor 'nowrap".
+
+Com o:
+
+    flex-wrap: nowrap;
+
+se o container-pai for menor do que a totalidade de espaço que os filhos usam, eles vão ser espremidos e mudar de tamanho. Porém, isso tem limitações, porque depende da capacidade de encolhimento do item. Exemplo: se tiver um texto com palavras e ele for bem encolhido, ele vai ficar do tamanho da palavra mais longa. Se ainda assim, não der certo, aí ele faz a quebra de linha.
+
+Então o tamanho de um bloco depende muito do conteúdo que existe nele.
+
+Em resumo, 'flex-wrap: nowrap;' sinaliza para que os blocos não saiam da sequência padrão, eles serão espremidos.
+
+Se colocar 'display: flex;' em um container pai, ele já é por padrão 'flex-wrap: nowrap;'.
+
+Já o:
+
+    flex-wrap: wrap;
+
+faz com que, se o espaço do container-pai for insuficiente, o último bloco 'quebre', indo no sentido do cross-axis. Ou seja, ele não muda o tamanho dos blocos, não os espreme.
+
+Também tem o:
+
+    flex-wrap: wrap-reverse;
+
+Isso faz com que ele se comporte como o valor wrap, sem espremer o bloco, só que ao invés de ir no sentido do cross-axis, ele vai no reverso do sentido do cross-axis (ou seja, para cima, no padrão nosso).
+
+--- Parei em 7:38.
