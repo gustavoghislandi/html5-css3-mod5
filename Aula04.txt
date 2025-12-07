@@ -28,4 +28,21 @@ Também tem o:
 
 Isso faz com que ele se comporte como o valor wrap, sem espremer o bloco, só que ao invés de ir no sentido do cross-axis, ele vai no reverso do sentido do cross-axis (ou seja, para cima, no padrão nosso).
 
---- Parei em 7:38.
+Existe uma maneira de simplificar, que é o 'flex-flow'.
+
+'flex-flow' nada mais é do que 'flex-direction + flex-wrap'. É um shorthand.
+
+Exemplo:
+
+    flex-flow: row nowrap;
+
+É recomendação da W3C utilizar o flex-flow.
+
+--
+
+No container filho:
+
+    flex: auto;
+
+faz com que não apareça o background, que não sobre espaços não preenchidos entre os items. Os blocos se reorganizam para ocupar todo o espaço do container-pai.
+
