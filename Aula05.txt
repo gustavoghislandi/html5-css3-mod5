@@ -8,37 +8,37 @@ Ela usa como referência o main-axis (eixo principal), que possui o main-start e
 
 Usando:
 
-    'justify-content: flex-start';
+    justify-content: flex-start;
 
 Isso fará com que o primeiro item fique colado ao main-start e, caso haja um espaço livre ao final, esse espaço livre ficará próximo ao main-end. Ou seja, não é necessariamente um alinhamento à esquerda cujo final fica do lado direito, isso vai depender do main-axis. Se o main-axis for 'row-reverse', por exemplo, o main-start ficará na direita e o main-end na esquerda. Ou seja, é um alinhamento que começa do início ao fim.
 
 Quando for:
 
-    'justify-content: flex-end';
+    justify-content: flex-end;
 
 Será o contrário, então o último item ficará colado ao main-end e o espaço vazio, se houver, ficará junto ao main-start, para não dizer que ficará entre o main-end e o primeiro item. Ou seja, é um alinhamento que começa do final ao início.
 
 Já o:
 
-    'justify-content: center';
+    justify-content: center;
 
 Centralizará o conteúdo no centro, entre o main-star e o main-end. Ou seja, os items ficarão unidos bem ao centro do main-axis, e os espaços vazios, se houver, ficarão metade entre o main-start e o primeiro item e metade entre o main-end e o último item. Se for 'flex-direction: column', por exemplo, pode ficar em cima e embaixo.
 
 Também tem o:
 
-    'justify-content: space-between';
+    justify-content: space-between;
 
 Isso faz com que o primeiro item fique junto ao main-start e o último item junto ao main-end. O restante dos itens ficará distribuído entre eles, com espaçamento igual.
 
 Diferentemente, mas parecido é o:
 
-    'justify-content: space-evenly';
+    justify-content: space-evenly;
 
 Isso fará com que o main-start e o main-end tenham espaços em branco logo no início, de modo que todos os itens tenham espaçamento em um lado e no outro. Esse espaçamento é igual para todos. Ou seja, ao invés de colar o primeiro e o último itens no start e no end, agora eles descolam e esse descolamento é do mesmo tamanho que o espaçamento entre um item e outro. Ou seja, num exemplo com 3 itens, se for um 'flex-direction: row', o espaçamento pode ficar algo como 5px-(item1)-5px-(item2)-5px-(item3)-5px.
 
 Ligeiramente diferente é o:
 
-    'justify-content: space-around;
+    justify-content: space-around;
 
 Nesse caso, também há um espaçamento antes do primeiro item e depois do último, porém, agora o espaçamento é como se dobrasse no restante. Em verdade, é que cada item terá um espaçamento próprio seu. Num exemplo com 3 itens, esses receberão cada um um espaçamento igual antes e depois. Isso fará com que a apresentação deles seja, por exemplo, algo assim: 5px-(item1)-5px--5px-(item2)-5px--5px-(item3)-5px. Escrito de outro modo: 5px-(item1)-10px-(item2)-10px-(item3)-5px. É como um margin em um lado e no outro de cada filho, mas estamos trabalhando com o container-pai.
 
@@ -46,4 +46,32 @@ A verdade é que isso é bem intuitivo para quem entende inglês, pois 'space-be
 
 Fique atento que isso se aplica em relação ao main-axis, então se mudar o flex-direction para column, por exemplo, tudo isso será igual, mas em relação ao flex-start e o flex-end daquele main-axis.
 
-Parei em 13:50.
+---
+
+Agora em relação ao cross-axis (eixo transversal), teremos os 'cross-start' e o 'cross-end'.
+
+A propriedade chame-se 'align-items' e tem por padrão o valor 'stretch' (que quer dizer esticar):
+
+    align-items: stretch;
+
+Então, por padrão, ele irá sempre esticar os elementos no sentido do cross-axis (se você aumentar a altura quando o flex-direction for value row, por exemplo).
+
+De outro modo, existe o:
+
+    align-items: flex-start;
+
+Que fará com que os elementos não façam o stretch (esticamento) e fiquem no início do cross-axis, que é o cross-start.
+
+ATENÇÃO! Fique atento que o espaço em branco que pode sobrar lateralmente, no caso de um flex-direction: row, é modificado com o justify-content, que cuida do main-axis; enquanto o align-items resolverá as questões no cross-axis, nesse caso/exemplo o espaço relacionado à vertical.
+
+Em oposição ao flex-start, existe o:
+
+    align-items: flex-end;
+
+Isso fará os itens ficarem juntos ao final do cross-axis, sem esticamento.
+
+Há também o:
+
+    align-items: center;
+
+Que centralizará em relação ao cross-axis.
