@@ -1,0 +1,56 @@
+Alinhamento de elementos empacotados no Flexbox
+
+Ainda estamos falando de flex-container (container-pai).
+
+Propriedade 'align-content'.
+
+Resumidamente:
+
+'justify-content' vai alinhar os itens dentro do eixo-principal (main-axis).
+'align-items' vai alinhar os itens dentro do eixo-transversal (cross-axis).
+
+E o 'align-content' alinha os itens no eixo-transversal (cross-axis), mas QUANDO ELES ESTÃO EMPACOTADOS (ou seja com value 'wrap' ou 'wrap-reverse').
+
+A propriedade 'align-content' tem por padrão o valor 'stretch'.
+
+Quando o container pai for reduzido no eixo-principal e o flex-wrap estiver atuando com envelopamento ('wrap' ou 'wrap-reverse'),
+
+    align-content: stretch;
+
+fará uma divisão equitativa do container no sentido do cross-axis (podendo dividir em 2 ou mais partes a depender da redução de tamanho). Ainda, ele esticará os itens até o final daquela divisão. Ou seja, se existirem 2 divisões, ao invés de divir o container em 2 e os blocos ficarem do mesmo tamanho, por conta do stretch, eles serão esticados até o final da divisão. Contudo, a quebra/divisão ainda ocorre porque o envelopamento ('wrap' ou 'wrap-reverse') está ativo. Com o align-content: stretch sempre será ocupado o total de comprimento do cross-axis (em uma ou mais quebras). Ou seja, as quebras irão acontecer e esticar até o tamanho do container no eixo cross-axis.
+
+Já quando for:
+
+    align-content: flex-start;
+
+Ele pegará os itens e os junto ao cross-start, deixando um espaço esvaziado próximo ao cross-end.
+
+Enquanto se for:
+
+    align-content: flex-end;
+
+Ele colocará os itens junto ao cross-end. PORÉM, PERCEBA QUE A QUEBRA OCORRERÁ NO SENTIDO AINDA DO CROSS-AXIS (ou seja, com o cross-axis para baixo, os itens descem ao final e quebram para baixo, ao invés de para cima, como poderia parecer intuitivamente). O espaço esvaziado ficará próximo ao cross-start.
+
+Já no:
+
+    align-content: center;
+
+Será feito um espaçamento equitativo do cross-start até os itens (quebrados) e do cross-end até os itens. OS ITENS PERMANECEM QUEBRADOS E NO SENTIDO DO CROSS-AXIS, só que ficarão quebrados lá no meio.
+
+Há o:
+
+    align-items: space-between;
+
+Que fará com que parte dos itens fiquem junto ao cross-start, a outra parte junto ao cross-end e o restante com um espaçamento entre eles (se houver mais itens/quebras).
+
+Ainda, da mesma forma que em 'justify-content':
+
+    align-items: space-evenly;
+
+Fará com que haja um espaçamento igualitário entre os itens e esse espaçamento também ficará um junto ao cross-start e outro junto ao cross-end. Ou seja, os itens descolam dos limites (cross-start e cross-end).
+
+Por fim, o:
+
+    align-items: space-around;
+
+Fará as divisões equitativas que as quebras proporcionarem (duas, três, quatro... por aí vai) e essas divisões terão espaçamentos antes e depois dos itens. O que pode gerar um efeito estético de parecer que há o dobro do espaçamento entre os itens, mas é que cada grupo de itens tem o seu espaçamento próprio, como um margin próprio.

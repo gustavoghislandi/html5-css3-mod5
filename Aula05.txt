@@ -22,7 +22,7 @@ Já o:
 
     justify-content: center;
 
-Centralizará o conteúdo no centro, entre o main-star e o main-end. Ou seja, os items ficarão unidos bem ao centro do main-axis, e os espaços vazios, se houver, ficarão metade entre o main-start e o primeiro item e metade entre o main-end e o último item. Se for 'flex-direction: column', por exemplo, pode ficar em cima e embaixo.
+Centralizará o conteúdo no centro, entre o main-start e o main-end. Ou seja, os items ficarão unidos bem ao centro do main-axis, e os espaços vazios, se houver, ficarão metade entre o main-start e o primeiro item e metade entre o main-end e o último item. Se for 'flex-direction: column', por exemplo, pode ficar em cima e embaixo.
 
 Também tem o:
 
