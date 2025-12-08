@@ -7,7 +7,7 @@ Propriedade 'align-content'.
 Resumidamente:
 
 'justify-content' vai alinhar os itens dentro do eixo-principal (main-axis).
-'align-items' vai alinhar os itens dentro do eixo-transversal (cross-axis).
+'align-items' vai alinhar os itens dentro do eixo-transversal (cross-axis). (SEM EMPACOTAMENTO)
 
 E o 'align-content' alinha os itens no eixo-transversal (cross-axis), mas QUANDO ELES ESTÃO EMPACOTADOS (ou seja com value 'wrap' ou 'wrap-reverse').
 
@@ -39,18 +39,18 @@ Será feito um espaçamento equitativo do cross-start até os itens (quebrados) 
 
 Há o:
 
-    align-items: space-between;
+    align-content: space-between;
 
 Que fará com que parte dos itens fiquem junto ao cross-start, a outra parte junto ao cross-end e o restante com um espaçamento entre eles (se houver mais itens/quebras).
 
 Ainda, da mesma forma que em 'justify-content':
 
-    align-items: space-evenly;
+    align-content: space-evenly;
 
 Fará com que haja um espaçamento igualitário entre os itens e esse espaçamento também ficará um junto ao cross-start e outro junto ao cross-end. Ou seja, os itens descolam dos limites (cross-start e cross-end).
 
 Por fim, o:
 
-    align-items: space-around;
+    align-content: space-around;
 
 Fará as divisões equitativas que as quebras proporcionarem (duas, três, quatro... por aí vai) e essas divisões terão espaçamentos antes e depois dos itens. O que pode gerar um efeito estético de parecer que há o dobro do espaçamento entre os itens, mas é que cada grupo de itens tem o seu espaçamento próprio, como um margin próprio.

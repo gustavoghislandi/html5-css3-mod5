@@ -1,0 +1,5 @@
+Anatomia dos itens Flexbox
+
+Agora serão estududas as propriedades que se aplicam as itens de caixas flexíveis (Flexbox items).
+
+Quando criamos containers flex, a parte de fora(pai) é flex e os itens (filhos) não são flex. Mas é possível tornar eles também containers.
