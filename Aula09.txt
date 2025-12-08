@@ -2,6 +2,8 @@ Propriedade flex-basis em Flexbox
 
 Lembrando agora já estamos falando do propriedades do container-filho.
 
+'flex-basis' se orienta em relação ao MAIN-AXIS.
+
 Por padrão 'flex-basis' tem valor 'auto':
 
     flex-basis: auto;
