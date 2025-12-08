@@ -1,5 +1,49 @@
 Anatomia dos itens Flexbox
 
-Agora serão estududas as propriedades que se aplicam as itens de caixas flexíveis (Flexbox items).
+Agora serão estududas as propriedades que se aplicam as itens de caixas flexíveis (os flex-items).
+
+O 'flex: auto;' que foi usado antes é uma configuração de item. Mas ele será explicado só mais pra frente.
 
 Quando criamos containers flex, a parte de fora(pai) é flex e os itens (filhos) não são flex. Mas é possível tornar eles também containers.
+
+Propriedade 'order'.
+
+Por padrão, todo item tem order com valor 0.
+
+Com ele você numera o flex-item e o CSS os colocará em ordem crescente de apresentação. 
+
+Então, por exemplo, se existirem 4 divs e você colocar os números 3, 5, -2 e 0, respectivamente a cada uma, elas serão reorganizadas para se apresentarem na ordem -2, 0, 3, 5.
+
+Quando o valor do order de um flex-item for igual ao de outro dentro do mesmo contaneir-pai, o que vier antes no HTML será que o que virá antes na lista.
+
+---
+
+Propriedade 'align-self'.
+
+Ela se aplica a cada um dos items.
+
+Ela funciona de acordo com o cross-axis.
+
+Tem 5 valores possíveis:
+
+    align-self: auto;
+
+Esse herda as características de alinhamento do container-pai (HERDA O 'align-items' DO PAI.)
+
+Depois tem o restante que já sabemos como se comportam (sempre em relação ao eixo cross-axis e INDIVIDUALMENTE): 
+
+    align-self: flex-start;
+
+Esse posiciona o item no ínicio do cross-axis.
+
+    align-self: flex-end;
+
+Esse posiciona o item no final do cross-axis.
+
+    align-self: center;
+
+Esse posiciona o item no centro do cross-axis.
+
+    align-self: strecht;
+
+Esse estica o item do início ao fim do cross-axis.
