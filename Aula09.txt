@@ -1,0 +1,19 @@
+Propriedade flex-basis em Flexbox
+
+Lembrando agora já estamos falando do propriedades do container-filho.
+
+Por padrão 'flex-basis' tem valor 'auto':
+
+    flex-basis: auto;
+
+Isso faz com que a caixa (flex-item) tenha o tamanho (no sentido do main-axis) igual ao tamanho do seu conteúdo. Exemplo, no caso de flex-flow: row nowrap (padrão), a largura vai estreitar até o tamanho do conteúdo. Exemplo, se for um caractere, ficará somente com um caractere de largura; se for 8 caracteres ficará com 8 caracteres de largura. [Nota: Testei e isso não ocorrerá se houver um padding, por exemplo. Usar padding assim poderá gerar extravazamento.]
+
+Também é possível colocar um valor em pixels:
+
+    flex-basis: 200px;
+
+Geralmente se colocar todos os itens com o mesmo valor, mas pode ser que um, por exemplo seja 100px. CASO NÃO EXISTA ESPAÇO SUFICIENTE PARA COMPORTAR TODOS OS ELEMENTOS COM 200px, POR EXEMPLO, ELES TERÃO O TAMANHO REDUZIDO PROPORCIONALMENTE, ACOMODANDO-SE AO CONTAINER-PAI. Por isso que se pergunta, "qual o formato da água?". SE NECESSÁRIO, ELE QUEBRARÁ O CONTEÚDO DENTRO DELE AO FAZER ESSA REDUÇÃO.
+
+Se diminuir tanto a ponto de não dar mais de diminuir, ocorrerá extravazamento.
+
+COM Flexbox, A IDEIA, NO EIXO-PRINCIPAL (main-axis), NÃO É UTILIZAR LARGURA (width) OU ALTURA (height), MAS SIM flex-basis.
