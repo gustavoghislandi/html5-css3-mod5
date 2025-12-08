@@ -1,0 +1,20 @@
+Centralização absoluta com Flexbox
+
+Ainda estaremos tratando com o flex-container (container-pai).
+
+Faremos o exercício com um item, mas serve para mais de um item.
+
+Funcionará como a centraliação feita anteriormente, nos outros capítulos, mas sem precisar ficar fazendo conta.
+
+Independentemente do formato do container (se ele aumenta em altura ou largura, por exemplo), o item sempre ficará no meio.
+
+Basicamente, pegaremos as propriedades relacionadas ao main-axis (justify-content) e ao cross-axis (align-items) e colocaremos o valor 'center' em ambas.
+
+    justify-content: center;
+    align-items: center;
+
+[Isso era óbvio, não precisava explicar, mas... prossigamos pela didática]
+
+O Guanabara não gosta de colocar o body como container-pai, ele gosta sempre de reservar o espaço colocando uma tag no meio. No exemplo, ele usou a tag main.
+
+Ele disse pra tentar fazer essas adaptações lá no exercício da tela de login. [Eu não vou fazer. Não vai interferir no meu aprendizado. Prefiro fazer algo novo se for o caso.]
