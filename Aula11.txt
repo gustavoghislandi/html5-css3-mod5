@@ -1,0 +1,75 @@
+A propriedade flex
+
+'flex' é um shorthand. E é uma propriedade que se aplica aos flex-itens.
+
+Os valors de 'flex-basis', 'flex-shrink' e 'flex-grow' são obrigatoriamente configurados em todos os itens, para que a interface funcione de uma maneira fluida e coerente.
+
+A W3C recomenda evitar os valores de 'flex-basis', 'flex-shrink' e 'flex-grow' separadamente, porque existe a propriedade 'flex' (use-a).
+
+    flex: [flex-grow] [flex-shrink] [flex-basis]
+
+Exemplo para 'flex-basis: 150px; flex-grow: 0; flex-shrink: 1;:
+
+    flex: 0 1 150px;
+
+Então, por isso que quando você vê interfaces com 'flex: 1;' é porque o flex-grow está igual 1, ou seja, está permitindo crescer.
+
+É possível usar o flex-basis com valor 'auto'. 
+
+Quando o valor de flex-basis é auto, o valor em px é o tamanho da caixa, que é determinado pelo conteúdo, então, por exemplo, quanto mais caracteres, maior esse valor será.
+
+-----
+
+Usar:
+
+    flex: auto;
+
+É equivalente a:
+
+    flex: 1 1 auto;
+
+Ou seja, pode expandir e encolher e o tamanho inicial do item (flex-basis) será determinado pelo seu conteúdo.
+
+-----
+
+Usar:
+
+    flex: inicial;
+
+É equivalente a:
+
+    flex: 0 1 auto;
+
+Que é o padrão. Ou seja, não cresce, mas encolhe e o tamanho inicial do item (flex-basis) será determinado pelo seu conteúdo.
+
+-----
+
+Usar:
+
+    flex: none;
+
+É equivalente a:
+
+    flex: 0 0 auto;
+
+Ou seja, é inflexível para expensão e retração. Só mantém o tamanho inicial do item (determinado pelo seu conteúdo) fixo.
+
+-----
+
+Ou seja, existem valores sintetizadores de valores, que são o 'inicial' (flex: 0 1 auto;), 'none' (flex: 0 0 auto;) e 'auto' (flex: 1 1 auto;).
+
+-----
+
+Se estiver somente com um valor, como, por exemplo:
+
+    flex: 3;
+
+É equivalente a:
+
+    flex: 3 1 auto;
+
+Ou seja, 3 de flex-grow e o restante é a configuração padrão.
+
+------------------
+
+Curiosidade: o Guanabara prefere usar Grid ao invés de Flexbox para interfaces de websites.

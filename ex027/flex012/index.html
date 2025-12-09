@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Flexible Box</title>
+    <style>
+        div.container {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row nowrap;
+        }
+        
+        div.item {
+            background-color: lightskyblue;
+            border: 1px solid black;
+            text-align: center;
+
+            /* Se deixasse o 'flex-basis: 300px' aqui sem colocar dentro dos 'flex', não iria funcionar como esperado. Ao que tudo indica, o flex reseta e/ou sobrescreve o valor de flex-basis */
+            /* flex-basis: 300px; */
+        }
+
+        div#cxA {
+            flex: 5 4 300px;
+            background-color: lightyellow;
+        }
+
+        div#cxB {
+            flex: 0 1 300px;
+            background-color: lightgreen;
+        }
+
+        div#cxC {
+            flex: 10 0 auto; /* Quando o valor de flex-basis é auto, o valor em px é o tamanho da caixa, que é determinado pelo conteúdo, então, por exemplo, quanto mais caracteres, maior esse valor será */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="cxA">A</div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+</body>
+</html>
