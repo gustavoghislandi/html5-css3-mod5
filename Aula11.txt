@@ -34,7 +34,7 @@ Ou seja, pode expandir e encolher e o tamanho inicial do item (flex-basis) será
 
 Usar:
 
-    flex: inicial;
+    flex: initial;
 
 É equivalente a:
 
@@ -56,7 +56,7 @@ Ou seja, é inflexível para expensão e retração. Só mantém o tamanho inici
 
 -----
 
-Ou seja, existem valores sintetizadores de valores, que são o 'inicial' (flex: 0 1 auto;), 'none' (flex: 0 0 auto;) e 'auto' (flex: 1 1 auto;).
+Ou seja, existem valores sintetizadores de valores, que são o 'initial' (flex: 0 1 auto;), 'none' (flex: 0 0 auto;) e 'auto' (flex: 1 1 auto;).
 
 -----
 
