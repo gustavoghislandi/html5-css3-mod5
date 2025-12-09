@@ -1,0 +1,55 @@
+Controle do tamanho de itens flexíveis
+
+Novamente, estamos falando de propriedades aplicáveis aos flex-items.
+
+Propriedades 'flex-grow' e 'flex-shrink' (crescer e encolher).
+
+Para estudar melhor elas, o flex-wrap deve estar com value 'nowrap', porque senão os itens não vão crescer e diminuir, os itens irão "quebrar". Contudo, você poderá testar, por exemplo, o 'flex-grow: 1;' e verá que numa quebra de elementos (com wrap ou wrap-reverse em flex-wrap), o elemento quebrado irá crescer até preencher todo o container-pai no main-axis.
+
+Por padrão, o valor do 'flex-shrink' é 1; e, por padrão, o valor do 'flex-grow' é 0. Qualquer valor acima de 0 também equivale a sim; 0 equivale a não. Então, por padrão, qualquer item pode encolher, mas não pode crescer. Aceita valores decimais (como 0.5, por exemplo).
+
+Contudo, ESSAS PROPRIEDADES SÃO PROPORCIONAIS. Exemplo: Suponha 3 flex-itens com 'flex-grow', sendo o primeiro com valor 0, o segundo com valor 1, e o terceiro com valor 2. Quando o container for esticado, o flex-item com valor 0 não crescerá. O segundo, com valor 1, crescerá na proporção de 1/3 (1 dividido pelo total das partes, 1+2=3). O terceiro, com valor 2, crescerá na proporção de 2/3. Se os valores forem 0, 2 e 2, os itens com valor 2 crescerão igualmente, dividindo a proporção 2/4 cada um.* 
+
+Ou seja, cada flex-item crescerá obedecendo a regra '(valor/soma_dos_valores)*(valor_aumentado_ou_reduzido)', então se houver valores 0, 1, 3 e 5, o do item cujo valor é 3, crescerá na proporção de 5/9.*
+
+Esse cálculo é valido para o 'flex-shrink' também, porém de forma invertida, evidentemente. Ou seja, é inversamente proporcional. Exemplo, para valores 0, 1, 3 e 5, o item cujo valor é 3 reduzirá 3/9 e o de valor 5 reduzirá 5/9, reduzindo mais em tamanho que o anterior.*
+
+
+LEMBRANDO QUE O 'flex-shrink' e o 'flex-grow' são aplicáveis INDIVIDUALMENTE a cada flex-item.
+
+Resumidamente, se houver um flex-container de 450px e 3 flex-items de 150px (desconsiderando margin, padding, etc) com 'flex-shrink: 0;' e 'flex-grow: 0;' e o container for encolhido, os itens extravazarão (ocorrerá um "overflow"); se o container for aumentado, os itens permanecerão no seu tamanho original e não crescerão junto com o container-pai. Porém, se 'flex-shrink: 1;' e 'flex-grow: 1;' em cada item, quando o container-pai for encolhido, eles encolherão junto; e se o container-pai for esticado, eles esticarão junto.
+
+Nota: Ao testar, você perceberá que não costuma ser muito interessante colocar valores de height e width nos elementos de Flexbox, sejam eles flex-container ou flex-item.
+
+Eles geralmente são usados em conjunto (flex-basis, flex-shrink e flex-grow).
+
+------------------------------
+*Exemplos mais claros:
+
+Exemplo de crescimento (flex-grow):
+
+Se o container precisar crescer um total de 60 pixels (digamos que o espaço total a ser aumentado seja de 60px):
+
+Item 1: O valor de flex-shrink é 1, então ele vai crescer 
+1/6×60=10 pixels
+
+Item 2: O valor de flex-shrink é 2, então ele vai crescer
+2/6×60=20 pixels
+
+Item 3: O valor de flex-shrink é 3, então ele vai crescer
+3/6×60=30 pixels
+
+---
+
+Exemplo de encolhimento (flex-shrink):
+
+Se o container precisar encolher um total de 60 pixels (digamos que o espaço total a ser reduzido seja de 60px):
+
+Item 1: O valor de flex-shrink é 1, então ele vai encolher
+1/6×60=10 pixels
+
+Item 2: O valor de flex-shrink é 2, então ele vai encolher
+2/6×60=20 pixels
+
+Item 3: O valor de flex-shrink é 3, então ele vai encolher
+3/6×60=30 pixels
