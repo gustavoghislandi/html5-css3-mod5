@@ -1,0 +1,9 @@
+Criando um menu com Flexbox (parte 2)
+
+Ao ir editando junto com ele e tentar adiantar algumas coisas na UI eu percebi que dificilmente será necessário ajustar um margin ou padding. Coisas como align-items tendem a resolver isso. E misturar ambos daria problemas. É mais acertado usar um ou outro, os dois juntos não dá muito bom.
+
+Então, priorizar os usos das propriedades Flexbox e, muito eventualmente, caso necessário, utilizar propriedades como margin e padding, por exemplo.
+
+--
+
+Aula que vem misturamos Flexbox com media queries. A ideia é essa, misturar as técnicas ao invés de usar um tipo só.
