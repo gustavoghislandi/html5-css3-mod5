@@ -1,0 +1,23 @@
+Criando um menu com Flexbox (parte 1)
+
+Feita a estruturação inicial, nada de Flexbox até agora.
+
+Pois é assim que nós vamos pensar/agir:
+
+Nós vamos:
+
+- idealizar o layout;
+- montar a estrutura dele;
+
+e depois/por fim:
+
+- reorganizar as caixas utilizando, eventualmente, Flexbox (se necessário).
+
+
+
+
+---- resumo
+
+- idealizar o layout;
+- montar a estrutura dele (HTML e CSS);
+- reorganizar as caixas utilizando, eventualmente, Flexbox (se necessário).
