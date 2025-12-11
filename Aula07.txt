@@ -2,7 +2,7 @@ Alinhamento de elementos empacotados no Flexbox
 
 Ainda estamos falando de flex-container (container-pai).
 
-Propriedade 'align-content'.
+Propriedade 'align-content'. (com WRAP ou WRAP-REVERSE - cross-axis)
 
 Resumidamente:
 

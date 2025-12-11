@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+header > h1 {
+    flex-basis: 38px;
+}
+
+header, header > nav {
+    flex-flow: column nowrap;
+    /* justify-content: space-between;  Não alterou nada porque não tem height (main-axis) além, para poder alterar. */ 
+}
+
+header > nav > a{
+    width: 90vw;
+    margin: 0px 0px 5px 0px;
+}
+
+header > nav {
+    margin-bottom: 2px;
+}

@@ -1,0 +1,5 @@
+Menu Responsivo com Flexbox e Media Queries na Prática
+
+Aqui será feito ao contrário da técnica do mobile first. Também funciona, principalmente porque o projeto é pequeno.
+
+Feito em cima do flex013.
