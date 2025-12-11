@@ -1,0 +1,15 @@
+Conteúdo flexível apenas com Flexbox (parte 1)
+
+Exercício na pasta flex014.
+
+---
+Se você quiser que o vídeo do Youtube funcione e você tiver python instalado, use:
+
+	cd pasta_do_seu_site
+	python -m http.server        
+    
+    // No Linux, no meu caso é python3
+
+Depois abra no navegador:
+
+	http://localhost:8000
