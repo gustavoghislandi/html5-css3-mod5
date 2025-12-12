@@ -1,0 +1,5 @@
+Conteúdo flexível apenas com Flexbox (parte 2)
+
+Fiz com algumas adaptações que preferi em relação ao dele.
+
+[O dele tem uma imagem .png de fundo transparente, o que fica melhor esteticamente no caso, mas o meu tem uma cor de fundo mais bonita. É só para treino/aprendizado mesmo.]

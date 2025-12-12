@@ -19,6 +19,10 @@ p, h1, h2 {
     text-align: justify;
 }
 
+h1 {
+    line-height: 1em;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
@@ -28,4 +32,40 @@ body {
 section.flex-content {
     padding: 20px;
     background-color: lightslategray;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+article.text-media {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; /* só funciona se não tiver stretch funcionando */
+}
+
+article.media-text {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between; /* só funciona se não tiver stretch funcionando */
+}
+
+article > div.text {
+    flex: 1 1 400px;
+
+    padding: 20px 20px 0px 0px;
+}
+
+article > div.media {
+    flex: 1 1 400px;
+
+    padding-top: 20px;
+    
+    align-self: center;
+}
+
+div.media > img, div.media > iframe {
+    display: block;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
 }
