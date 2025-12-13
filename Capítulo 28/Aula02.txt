@@ -1,0 +1,33 @@
+A Anatomia de um Grid
+
+Em inglês existe "row" e "line". Em português ambos são "linha". Então, existe o conceito de Grid row e o de Grid line, que são diferentes.
+
+Todo Grid é baseado em um elemento chamado 'grid container'. Que é uma caixa (container) que vai conter vários itens.
+
+O 'grid item' é uma célula dentro do grid.
+
+'grid track' é o nome dado a uma linha ou coluna de itens que vai do início ao fim do container.
+A track na horizontal é chamada de 'row track'. Enquanto a vertical é chamada de 'column track'.
+
+Isso não pode ser confudido com as 'grid lines', que são as linhas entre os itens, ou que delimitam os itens. Ou seja, um grid track estaria entre duas grid lines (ou 4).
+
+Existem as 'grid lines' verticais e as horizontais. Ambas são numeradas.
+
+As grid lines verticais delimitam as colunas e são numeradas sempre da esquerda para a direita. A linha vertical mais à esquerda é a linha 1.
+
+As grid lines horizontais delimitam as linhas horizontais e são numeradas sempre de cima para baixo. A linha horizontal mais acima é a linha 1.
+
+Uma grade que seja 6x6 tem 6 tracks de altura (column track) por 6 tracks de largura (row track). E 7 linhas verticais e 7 linhas horizontais.
+
+A numeração dos grid lines pode ser negativa. Ou seja, inversa. Então, para um grid line de tamanho 7, a linha 7 seria também a -1, a 6 a -2, e assim suscessivamente.
+
+Isso é válido para vertical e horizontal.
+
+Isso facilita as delimitações. Por exemplo, no grid 6x6, para delimitar a área que vai da linha vertical 2 a 6, ao invés de ficar contando quantas são, é mais fácil dizer que vai da 2 a -2 (2/-2). Ou seja, vai da segunda até a penúltima (independente da quantidade de linhas).
+
+'grid area' é quando se pega um conjunto de itens e se trata eles como um agrupamento (um elemento único).
+
+Existe a possibilidade de você colocar um espaço entre os itens. [É como um margin.]
+
+Esse espaço se chama 'grid gap'. E você consegue alterar o tamanho desse gap sem alterar o tamanho do elemento(do item).
+
