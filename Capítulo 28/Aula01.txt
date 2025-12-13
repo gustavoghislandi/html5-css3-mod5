@@ -1,0 +1,30 @@
+O que é Grid Layout?
+
+Ter responsividade é algo que se busca tanto com o Grid Layout quanto com o Flexbox.
+
+A primeira versão do Grid Layout é de 2011.
+
+O Nome é:
+
+CSS Grid Layout Modulo Level 1
+
+A documentação oficial está no site da W3C.
+
+"CSS Grid Layout é um sistema para criação de layout baseado em uma grade bidimensional e otimizado para design de interfaces de usuário. Nesse modelo de grade, os elementos-filhos do contêiner que defina a grade podem ser posicionados livremente em espaços criados na estrutura, quer ela tenha sido definida com suas dimensões flexíveis ou fixas." [Tradução livre feita pelo Guanabara, do site da W3C]
+
+Então, basicamente, é possivel trabalhar com medidas flexíveis ou fixas dos itens-filhos que ficam dentro do container-pai.
+
+Basicamente o site será dividido em linhas e colunas.
+
+É possível delimitar de qual coluna até qual coluna e de qual linha até qual linha o item-filho será. E é possível também colocar coisas como "até a penúltima linha".
+
+É possível dar um nome para cada uma dessas áreas.
+
+Para telas menores, o conteúdo também é adaptável [me lembrou um wrap do Flexbox].
+Será usado media queries junto com o Grid Layout.
+
+Por que surgiu o Grid Layout?
+
+No passado se usava tabelas para estruturar o layout. Depois se passou por um período de uso "tableless", que seria com o uso de blocos e blocos inline (isso gerava muito overflow, conteúdo sendo jogado para fora do site). E, antes ainda das tables, usava-se frames (nessa época, quando mudava de tamanho de tela alguns sites faziam o usuário optar por uma verão com frames ou sem frames e também havia navegadores incompatíveis com frames.)
+
+Dentro de um Grid tudo tem um nome e as instruções do CSS serão dadas com base nesse nome.
