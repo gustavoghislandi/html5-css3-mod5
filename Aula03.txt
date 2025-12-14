@@ -1,0 +1,65 @@
+Propriedades de container para Grids (parte 1)
+
+Será explicado com um grid de 3x3.
+
+O Grid Layout é uma estrutura bidimensional, enquanto o Flexbox é uma estrutura unidimensional (ou linha ou coluna).
+
+Para criar o grid-container (a parte de fora):
+
+    display: grid;
+
+Então, se colocar 'display: grid;' em um componente, ele se tornará um grid-container e tudo que estiver dentro dele serão grid-items.
+
+Quando se coloca somente 'display: grid;', ele é um grid de 1 coluna e múltiplas linhas. Então, na aparência inicial, nada muda se for como no exemplo abaixo.
+
+Exemplo:
+
+    <div class="container">
+        <div class="item">A<div>
+        <div class="item">B<div>
+        <div class="item">C<div>
+        <div class="item">D<div>
+        <div class="item">E<div>
+        <div class="item">F<div>
+        <div class="item">G<div>
+    </div>
+
+Adicionando um 'grid-template-columns':
+
+    div.container {
+        display:grid;
+        grid-template-columns: auto auto;  
+    }
+
+No padrão 'auto auto', isso transformará o template em 2 colunas.
+
+Já se for, 'auto auto auto':
+
+    grid-template-columns: auto auto auto;
+
+Isso transformará o template em 3 colunas.
+
+Como o valor é 'auto', isso faz com que seja automaticamente calculado para que todas as colunas tenham o mesmo tamanho.
+
+Há também o 'grid-template-rows':
+
+    grid-template-rows: 100px 100px 100px;
+
+No exemplo acima, cada linha terá 100px de altura. Isso totalizará 300px de altura.
+
+A propriedade padrão é ele esticar os elementos (seja em linha ou coluna), igual o strecht do Flexbox, mas há como bloquear isso de acontecer.
+
+A propriedade 'grid-gap':
+
+    grid-gap: 20px;
+
+Altera todas as linhas e colunas colocando um gap entre elas (de 20px, nesse caso).
+
+O exemplo final ficou com 7 itens divididos em 3 linhas e 3 colunas, e nas linhas há 20px de gap, a partir deste CSS abaixo e do HTML mostrado mais acima.
+
+    div.container {
+            display:grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 100px 100px 100px;
+            grid-gap: 20px;
+        }
