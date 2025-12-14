@@ -1,0 +1,14 @@
+CSS Grid Layout na prática (parte 1)
+
+Dica boa do Guanabara: Para criar uma div com a classe direto, no VS Code, é só colocar div.nome_da_classe. Exemplo: div.container (igual no CSS). E isso aceita multiplicação com *.
+
+Perceba no exemplo que se a altura do container for fixada (250px, por exemplo), as divs (futuros grid-items) continuarão ocupando o espaço delas como em bloco normalmente. Contudo, ao adicionar 'display: grid;', as divs se distribuirão automaticamente em altura preenchendo equitativamente todo o espaço do container (agora, grid-container).
+
+A propriedade 'grid-gap' foi deprecada, agora usa-se somente 'gap'.
+
+--
+
+Na maioria dos navegadores, a partir de Style ou Layout em Dev Tools, você consegue ter acesso a 'Grid' ou 'grid' e com isso você poderá ver a grade grid, a numeração das linhas, números das áreas (isso eu vi no Firefox) e extender as linhas infinitamente (também vi no Firefox).
+
+No do Google Chrome [no Brave Browser também, mas não encontrei no Firefox], ao clicar numa imagem com 6 retângulos do lado direito de 'display: grid', você ainda consegue já testar outras propriedades como align-content, justify-content, align-items, justify-items, via mouse. É bem prático para testar layouts.
+

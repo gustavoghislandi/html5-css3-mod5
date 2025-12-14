@@ -49,17 +49,30 @@ No exemplo acima, cada linha terá 100px de altura. Isso totalizará 300px de al
 
 A propriedade padrão é ele esticar os elementos (seja em linha ou coluna), igual o strecht do Flexbox, mas há como bloquear isso de acontecer.
 
+--
+
 A propriedade 'grid-gap':
 
     grid-gap: 20px;
 
 Altera todas as linhas e colunas colocando um gap entre elas (de 20px, nesse caso).
 
-O exemplo final ficou com 7 itens divididos em 3 linhas e 3 colunas, e nas linhas há 20px de gap, a partir deste CSS abaixo e do HTML mostrado mais acima.
+O exemplo final ficou com 7 itens divididos em 3 linhas e 3 colunas, e nas linhas internas há 20px de gap, a partir deste CSS abaixo e do HTML mostrado mais acima.
 
     div.container {
             display:grid;
             grid-template-columns: auto auto;
             grid-template-rows: 100px 100px 100px;
             grid-gap: 20px;
+        }
+
+-------- NOTA: A propriedade grid-gap foi deprecada, agora deve-se usar somente 'gap'.
+
+Então, ao fim, seria isto:
+
+    div.container {
+            display:grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: 100px 100px 100px;
+            gap: 20px;
         }
