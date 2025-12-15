@@ -1,0 +1,105 @@
+Propriedades de container para Grids (parte 4)
+
+Função 'repeat'.
+
+Tanto em 'grid-template' como em 'grid-template-rows' ou em 'grid-template', é possível escrever isso:
+
+    grid-template-rows: 100px 100px 100px;
+    grid-template-columns: auto auto auto;
+
+Que é isso:
+
+    grid-template: 100px 100px 100px / auto auto auto;
+
+Assim:
+
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, auto);
+
+Que é isso:
+
+    grid-template: repeat(3, 100px) / repeat(3, auto);
+
+----
+Usando "unidade fracional" do Grid Layout.
+
+Divisão de tela em frações.
+
+Ela é muito mais precisa do que quando se usa medidas automáticas e medidas fixas.
+
+Exemplo: num container de 1500px de largura, se você colocar:
+
+    grid-template-columns: 1fr 1fr 1fr; 
+
+Cada 1fr (fração) equivalerá a 500px. Porque é 1/3 do total de frações. Ou seja, foram 3 partes (3 de 1fr) com valor de 1 cada.
+
+Há uma diferença entre auto e fr que o Guanabara não vai explicar agora. Mas ele disse que se for para usar grid, use fr ao invés de auto.
+
+
+
+----- ChatGPT sobre diferença entre 'auto' e 'fr' -----
+
+A diferença entre `auto` e `fr` no `grid layout` do CSS está no comportamento que cada um tem em relação ao espaço disponível na grid.
+
+1. **`auto`:**
+
+   * Quando você usa `auto`, o tamanho da célula (ou linha/coluna) será determinado pelo conteúdo dentro dela. Ou seja, o espaço da célula será "automático", baseado no tamanho do conteúdo.
+   * Se o conteúdo for maior que o espaço disponível, a célula irá se expandir para acomodá-lo (até o limite da grid, claro).
+   * Se o conteúdo for menor, a célula ficará com o tamanho exato do conteúdo, e o restante do espaço será distribuído pelas outras células da grid.
+
+   Exemplo:
+
+   ```css
+   grid-template-columns: auto auto;
+   ```
+
+   Nesse caso, as duas colunas terão o tamanho baseado no conteúdo dentro delas.
+
+2. **`fr`:**
+
+   * O `fr` (fração) é uma unidade relativa que distribui o espaço disponível restante na grid. Se você usa `fr`, está dizendo que a célula ou linha/coluna deve ocupar uma fração do espaço restante disponível após o preenchimento das células com tamanhos fixos ou `auto`.
+   * Isso permite um layout mais flexível e proporcional, pois o `fr` é uma unidade de medida "dinâmica", adaptando-se ao espaço disponível.
+
+   Exemplo:
+
+   ```css
+   grid-template-columns: 1fr 2fr;
+   ```
+
+   Nesse caso, a primeira coluna ocupará uma fração do espaço restante, enquanto a segunda ocupará o dobro dessa fração.
+
+---
+
+**Resumindo:**
+
+* **`auto`** é baseado no tamanho do conteúdo dentro da célula, adaptando-se ao que estiver dentro da grid.
+* **`fr`** é mais útil para distribuir o espaço restante de forma proporcional entre as colunas ou linhas, tornando o layout mais flexível.
+
+**Precisão:**
+O `fr` não é exatamente mais "preciso", mas oferece maior controle sobre a distribuição do espaço restante na grid. Já o `auto` pode ser mais preciso se o seu objetivo for fazer o layout se ajustar ao conteúdo, mas não permite a flexibilidade de distribuição que o `fr` oferece. Ambos têm seus usos dependendo do que você precisa fazer!
+
+----- Fim do ChatGPT sobre diferença entre 'auto' e 'fr' -----
+
+
+Para células de mesmo tamanho não fará diferença, mas se você quiser que, por exemplo, em 3 células, a do meio seja o dobro da largura das outras, então aí o fracionamento fará diferença (seria um 1fr 2fr 1fr). 
+
+IMPORTANTE: Portanto, nesse caso (grid-template-columns: 1fr 2fr 1fr;) seria ainda uma divisão em 3 colunas, mas em 4 frações.
+
+--
+Você pode misturar medidas. Pixel fixo, percentual e frações, por exemplo.
+
+SEMPRE QUE VOCÊ TIVER UMA MEDIDA QUE NÃO SEJA FRAÇÃO, ELA CONTA COMO UMA MEDIDA, UM TODO.
+
+Enquanto as frações, são baseada naquilo que sobrou, no que não é "uma medida" (como pixel fixo ou percentual).
+
+Ainda no exemplo de grid com largura de 1500px:
+
+    grid-template-columns: 100px 20% 1fr 1fr;
+
+Isso equivale a uma coluna com 100px, outra com 300px e duas com 550px cada (pois são os 1100px restantes fracionados em 2. 1/2 cada coluna).
+
+E nada impede que isso seja escrito usando a função 'repeat', assim:
+
+    grid-template-columns: 100px 20% repeat(2, 1fr);
+
+Sem perda de nada sem ganho de velocidade, é só uma simplificação [Segundo o Guanabara. Pois não testei].
