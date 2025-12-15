@@ -1,0 +1,46 @@
+CSS Grid Layout na prática (parte 3)
+
+Propriedade 'grid-auto-flow'.
+
+Ela determina se a expansão se dará em linha ('row') ou em coluna ('column'). Valor 'row' é o padrão.
+
+Então num 3x3, com J sendo o extra (implícito), ele mostrará algo como:
+
+A B C
+D E F
+G H I 
+J
+
+Enquanto se for:
+
+    grid-auto-flow: column;
+
+Será:
+
+A D G J
+B E H
+C F I
+
+---
+
+Tem outros valores para 'grid-auto-flow' que o Guanabara não quis ensinar, porque achou que iria ficar confuso ou complicado.
+
+---- Explicação ChatGPT para os valores ---- 
+
+Os valores possíveis para a propriedade `grid-auto-flow` são:
+
+1. 'row': Os itens são colocados nas linhas, uma após a outra.
+2. 'column': Os itens são colocados nas colunas, uma após a outra.
+3. 'dense': Preenche espaços vazios, tentando preencher os itens de forma compacta.
+4. 'row dense': Combina "row" com "dense", preenchendo as linhas de forma compacta.
+5. 'column dense': Combina "column" com "dense", preenchendo as colunas de forma compacta.
+
+--
+
+"De forma compacta" significa que o navegador tenta preencher os espaços vazios no grid, movendo os itens para locais disponíveis, sem deixar lacunas. Isso otimiza o uso do espaço.
+
+---- Fim da Explicação ChatGPT para os valores ---- 
+
+---
+
+Próxima aula é mesclagem de áreas.
