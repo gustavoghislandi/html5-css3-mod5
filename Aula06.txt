@@ -1,0 +1,18 @@
+CSS Grid Layout na prática (parte 2)
+
+Ele está mostrando tudo na prática.
+
+É só lembrar que:
+
+    'align'   -> vertical.
+    'justify' -> horizontal.
+    'items'   -> é dentro das células.
+    'content' -> é o conjunto de todas as células.
+
+Portanto, somente o que for 'content' terá 'space-evenly', 'space-between' e 'space-around', porque não faz sentido isso dentro dos items, já que seria um único bloco de conteúdo.
+
+[Pelo que testei, é bem provável que se vá querer, em geral, o que for 'items' como center.]
+
+--
+
+Na próxima aula ele disse que será vista uma maneira de resumir isso.
