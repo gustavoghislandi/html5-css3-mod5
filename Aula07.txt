@@ -1,0 +1,80 @@
+Propriedades de container para Grids (parte 3)
+
+Será visto:
+
+    'grid-auto-rows'
+    'grid-auto-columns'
+    'place-items'
+    'place-content'
+    'grid-template'
+
+As 3 últimas são propriedades simplificadoras.
+
+--
+O exemplo utilizado ainda é de 3x3, portanto de 9 células. 
+
+Agora serão adicionados os itens H e I, completando 9 items (antes eram 7).
+
+Esses são os itens explícitos.
+
+Se adicionarmos itens extras (como um J), esses serão itens implícitos. (Isso pode acontecer, por exemplo, se o backend enviar mais itens que o previsto explicitamente no grid)
+
+O grid-container não irá quebrar. Por padrão é acrescentado uma nova linha (daria para ser uma coluna). Porém o J (item implícito) ficará de tamanho diferente do restante dos itens (itens explícitos). Ele ficará da altura exata do conteúdo [é o padrão auto].
+
+No exemplo em que temos 3 linhas com 100px cada:
+
+    grid-template-rows: 100px 100px 100px;
+
+Para que os elementos implícitos que vierem a ser adicionados permaneçam tendo 100px, ao invés do padrão auto, é só colocar:
+
+    grid-auto-rows: 100px;
+
+Assim, cada item que necessitar de uma linha nova, ela será adicionada para conter ele e terá 100px de altura nela.
+
+---
+NOTA: Se o container tiver altura fixa, vai extravazar. E ele tiver altura fixa e grid-template-rows estiver tudo como auto, ele irá acomodar a nova célula igualando o tamanho às outras, fazendo caber todas no container sem extravazar (sem expandir o container, mas reduzindo a altura dos itens - se couber).
+---
+
+O mesmo é válido para colunas. Aí, você usaria a propriedade:
+
+    grid-auto-columns: 100px;
+
+Essa situação acontece menos.
+
+Portanto, 'grid-auto-rows' e 'grid-auto-columns' são propriedades que tratam do "grid implícito".
+
+----
+
+'place-items' pode substituir 'align-items' e 'justify-items'.
+
+    place-items: [align-items] [justify-items]
+
+Ou seja, é sempre nesta ordem, primeiro o 'align' (vertical) depois o 'justify' (horizontal).
+
+Exemplo:
+
+    place-items: stretch center;
+
+--
+
+O mesmo é válido para 'place-content', que substitui 'align-content' e 'justify-content':
+
+    place-content: [align-content] [justify-content]
+
+Sempre nesta ordem, primeiro o 'align' (vertical) depois o 'justify' (horizontal).
+
+Exemplo:
+
+    place-content: start end;
+
+---
+
+Já 'grid-template' substitui 'grid-template-rows' e 'grid-template-columns.
+
+    grid-template: [rows] / [columns];
+
+Então é sempre as rows antes das columns. E tem uma barra '/' entre eles.
+
+Exemplo:
+
+    grid-template: 100px 100px 100px / auto auto auto;
