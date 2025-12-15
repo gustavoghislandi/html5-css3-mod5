@@ -1,0 +1,70 @@
+Propriedades de itens para Grids (parte 1)
+
+Até agora foram vistas somente propriedades sobre grid-containers.
+
+Serão vistas as propriedades:
+
+    grid-row-start
+    grid-row-end
+    grid-column-start
+    grid-column-end
+
+Diz o Guanabara que para quem já jogou batalha naval vai ficar mais fácil de entender.
+
+Para exemplo, ele criou um container de 3x4 (com 12 células).
+
+    .container {
+        display: grid;
+        grid-template-rows: repeat (3, 100px);
+        grid-template-columns: repeat (4, 1fr);
+    }
+
+Ele vai querer dividir em 3 caixas.
+
+A caixa1 será a primeira linha (row) inteira.
+A caixa2 será o restante das linhas, mas metade das colunas.
+A caixa3 será também o restante das linhas, mas com a metade seguinte das colunas.
+
+A ideia é traçar uma diagonal da caixa (de cima para baixo, da esquerda para à direita), e passar os pontos dela. Se formos ver, a caixa1 tem os pontos (row/column) no grid assim ((1,2)/(1,5)).
+
+A caixa1 ficará assim:
+
+    .caixa1 {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+
+Ou seja, em termos de row, ela vai da linha 1 à linha 2 (isso é 1 célula de altura).
+E em termos de columns, ela vai da linha 1 até a linha 5 (isso são 4 células de largura). 
+
+Já a caixa2:
+
+    .caixa2 {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+E a caixa2:
+
+    .caixa2 {
+        grid-row-start: 2;
+        grid-row-end: 4;
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+----
+
+Os nomes são autoexplicativos.
+
+    grid-row-start é onde é o início da contagem da linha (grid-line) de row.
+    grid-row-end é onde é o fim da contagem da linha (grid-line) de row.
+    grid-column-start é onde é o início da contagem da linha (grid-line) de column.
+    grid-column-end é onde é o fim da contagem da linha (grid-line) de column.
+
+
+IMPORTANTE.: Nessas propriedades, usa-se as GRID-LINES, ou seja as linhas linhas mesmo. horizontais e verticais.
