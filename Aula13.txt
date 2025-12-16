@@ -7,3 +7,16 @@ Eu percebi que ele fez de uma maneira diferente da minha, eu fiz 10 partes em al
 Interessante a maneira que ele fez colocando 'heigth: 100vh', porque aí o grid-container toma todo o espaço de tela e o restante se adapta, se usar a unidade fraction 'fr'.
 
 Aí ele determinou, por exemplo, que o footer e o aside ficassem sempre de mesmo tamanho, a colocar eles como fixos.
+
+Basicamente, para tornar tudo flexível ele fez:
+
+    grid-template: 80px 40px 200px 40px / 200px 150px;
+
+Aí mudou para:
+
+    grid-template: 80px 40px 1fr 40px / 1fr 150px;
+
+Pois, ao adicionar 1fr, aquele elemento expandirá ao tamanho necessário para preencher o restante do container.
+
+
+NOTA: Eu estava me atrapalhando inteiro ao ir fazendo semelhante ao dele porque em um dos 'px' eu escrevi 'xp'. Isso detonou todo o grid.
