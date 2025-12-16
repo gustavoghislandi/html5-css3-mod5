@@ -1,0 +1,9 @@
+Desafio: Criando um Layout de Site com CSS Grid
+
+Agora antes de resolver ele disse que a segunda linha não adiantaria de nada e ele tirou. [Eu achei ela um referencial que me ajudou a calcular mais rapidamente as proporções. Mas realmente dava pra fazer sem.]
+
+Eu percebi que ele fez de uma maneira diferente da minha, eu fiz 10 partes em altura e 4 em largura. Ele fez 4 em altura e 2 em largura.
+
+Interessante a maneira que ele fez colocando 'heigth: 100vh', porque aí o grid-container toma todo o espaço de tela e o restante se adapta, se usar a unidade fraction 'fr'.
+
+Aí ele determinou, por exemplo, que o footer e o aside ficassem sempre de mesmo tamanho, a colocar eles como fixos.
