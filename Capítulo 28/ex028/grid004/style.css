@@ -1,0 +1,45 @@
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px; /* Perceba que o gap afetou o exterior das áreas, não dentro delas */
+}
+
+.caixa1 {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: -1;
+
+    background-color: yellow;
+}
+
+.caixa2 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: -3;
+
+    background-color: green;
+}
+
+.caixa3 {
+    grid-row-start: 2;
+    grid-row-end: -1; 
+    grid-column-start: -3;
+    grid-column-end: -1;
+
+    background-color: blue;
+}
+
+
+/* Adicionado caixa extra de 2 colunas e todas as linhas */
+.caixa4 {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    background-color: red;
+}
