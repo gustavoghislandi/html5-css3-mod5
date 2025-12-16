@@ -1,0 +1,37 @@
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px; /* Perceba que o gap afetou o exterior das áreas, não dentro delas */
+}
+
+.caixa1 {
+    grid-row: 1 / 2;
+    grid-column: 3 / -1;
+
+    background-color: yellow;
+}
+
+.caixa2 {
+    grid-row: 2 / span 2;
+    grid-column: 3 / -3;
+
+    background-color: green;
+}
+
+.caixa3 {
+    grid-row: 2 / -1;
+    grid-column: -3 / -1;
+
+    background-color: blue;
+}
+
+
+/* Adicionado caixa extra de 2 colunas e todas as linhas */
+.caixa4 {
+    grid-row: 1 / span 3;
+    grid-column: 1 / span 2;
+
+    background-color: red;
+}

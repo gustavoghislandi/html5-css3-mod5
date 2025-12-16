@@ -1,0 +1,89 @@
+CSS Grid: Shorthands para Itens
+
+Vamos aprender sobre:
+
+    'span'
+    'grid-row'
+    'grid-column'
+    'grid-area' (veremos da maneira tradicional e depois para nomear áreas)
+
+O 'span' funciona assim:
+
+Quando se tem, por exemplo, isto:
+
+    .caixa4 {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+Entre o start e o end do row, foram expandidas (span) 3 linhas, e entre o start e o end do column foram expandidas 2 colunas, então é possível representar assim:
+
+    .caixa4 {
+        grid-row-start: 1;
+        grid-row-end: span 3;
+        grid-column-start: 1;
+        grid-column-end: span 2;
+    }
+
+Ou seja, você diz onde inicia e não diz o final, mas diz o quanto será expandido a partir do início.
+
+[Se parar para perceber, é o equivalente a fórmula (número_span = número_end - número_start)]
+
+
+-----
+A simplificação que é possível fazer é transformar 'grid-row-start' e 'grid-row-end' em somente 'grid-row', e 'grid-column-start' e 'grid-column-end' em somente 'grid-column'. Então isto:
+
+    .caixa4 {
+        grid-row-start: 1;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+
+Ficaria assim:
+
+    .caixa4 {
+        grid-row: 1 / 4;
+        grid-column: 1 / 3;
+    }
+
+Ou, usando o span:
+
+    .caixa4 {
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 2;
+    }
+
+[De maneira inversa à observação anterior, se quiser encontrar a line final, é só usar a fórmula (número_end = número_start + número_span)]
+
+Se colocar somente um valor:
+
+    .caixa4 {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+
+Ele pressupõe o valor 'auto', então ele começa numa linha (aqui a 1 em ambos) e termina na imediatamente posterior (aqui a 2 em ambos). A dica é que é melhor preencher a parte final também, para não se perder.
+
+----
+Por fim, a simplificação maior. O 'grid-area'.
+
+    grid-area: [grid-row-start] / [grid-column-start] / [grid-row-end] / [grid-column-end]
+
+No exemplo:
+
+    grid-area: 1 / 1 / 4 / 3;
+
+Ou:
+
+    grid-area: 1 / 1 / span 3 / span 2;
+
+Ou seja, é basicamente o ponto inicial da diagonal (row-start, column-start) e depois o final (row-end, column-end).
+
+----
+
+A aula terminou com um desafio: Fazer uma tela de acordo com o 'desafio-grid.png', na pasta prints.
