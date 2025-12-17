@@ -1,0 +1,12 @@
+🥕💧 Grid Garden: resposta de todos os desafios
+
+Ele disse que não fez o 'order' durante as aulas do Grid Layout. Como eu tinha visto em Flexbox pensei que ele tinha passado. 
+
+Enfim, 'order' funciona para Grid Layout também.
+
+---
+Para mais jogos acesse:
+
+    codepip.com/games/
+
+Para alguns é necessário uma assinatura.
