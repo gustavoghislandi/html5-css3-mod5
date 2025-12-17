@@ -1,0 +1,346 @@
+Jogo extra - Não passado pelo Guanabara.
+
+
+Jogo(e site): https://anchoreum.com/
+
+
+Aprendi nele ANCHOR.
+
+Em resumo, a sintaxe de 'anchor' é:
+
+anchor(<anchor_name> <anchor_side>)
+
+----
+
+Ele traz alguns conceitos como âncora e span-all ou span-right para position-area, por exemplo:
+
+"There's one more set of arguments that position-area accepts:
+
+span-top
+span-bottom
+span-left
+span-right
+These span from the anchor in one direction.
+
+For example, position-area: top span-right will position the label above the anchor, spanning rightward into the available space."
+
+"
+
+#anchor {
+  anchor-name: --a1;
+}
+
+#label {
+  position: absolute;
+  position-anchor: --a1;
+  position-area: top span-right;
+}
+
+"
+
+
+Isso fará o #label ficar acima e expandido à direita em relação à âncora.
+
+
+-----
+Outro exemplo:
+
+Ao invés de top right é possível usar block-start inline-end, só que em linguas que escrevem ao contrário ficaria block-start inline-start. 'block' costuma ser eixo vertical, e 'inline' eixo horizontal.
+
+"You can get more concise with logical values by using just start and end.
+
+For example, instead of position-area: block-start inline-end, you can use position-area: start end.
+
+Order matters now with these shorter values. The first argument always refers to the block axis while the second refers to inline."
+
+
+-----
+
+"
+
+position-try-fallbacks: flip-block, flip-inline handles overflows in the vertical or horizontal directions. But it doesn't do well when the label overflows both vertically and horizontally at the same time.
+
+To deal with this, you can add a third value that combines the first two: flip-block flip-inline.
+
+The full line becomes:
+
+position-try-fallbacks: flip-block, flip-inline, flip-block flip-inline;
+
+[Este comando acima é interessante]
+
+"
+
+"
+
+In addition to the preset values, you can define a custom position using @position-try.
+
+Within this ruleset, you can include any combination of inset properties (top, right), margin (margin, margin-top), and sizing (width, min-height). Other properties are ignored as invalid.
+
+In the editor below, a custom ruleset named --custom-bottom has been created.
+
+Set it as the fallback option using either position-try-fallbacks or position-try.
+
+#label {
+  position: absolute;
+  position-anchor: --a1;
+  position-area: top;
+  position-try: --custom-bottom;   /* AQUI.*/ 
+  
+  /* O position-try é um shorthand para position-try-order e position-try-fallbacks */
+}
+
+@position-try --custom-bottom {
+  position-area: bottom;
+  width: 140px;
+  margin: -10px;
+}
+
+"
+
+"
+[Este é legal]
+
+With inset properties such as top or left on an anchor-positioned element, the function anchor() is available to you.
+
+anchor() allows you to reference one of the anchor's sides, including top, bottom, left, right, center, or a percentage.
+
+For example, setting top: anchor(bottom) on this label will align its top edge with the anchor's bottom edge.
+
+#anchor {
+  anchor-name: --a1;
+}
+
+#label {
+  position: absolute;
+  position-anchor: --a1;
+top: anchor(bottom);
+}
+
+"
+
+"
+
+anchor() also accepts percentage values.
+
+Align this label's top with the middle of the anchor using anchor(50%).
+
+anchor(center) will work equally well.
+
+"
+
+"
+
+The anchor() function also accepts start and end as values.
+
+"
+
+"
+
+Use anchor() with both the top and left properties of the label to tether it to the bottom right corner of the anchor.
+
+This is an alternative to position-area: bottom right.
+
+#anchor {
+  anchor-name: --a1;
+}
+
+#label {
+    position: absolute;
+    position-anchor: --a1;
+
+
+    /* AQUI ABAIXO */
+    top: anchor(end);
+    left: anchor(end);
+
+}
+
+"
+
+"
+
+Not only can you position an element based on another element's position, but you can also size it based on that element's size. The anchor-size() function is available to use with sizing properties like width, height, min-width, and max-height.
+
+For example, to set the width of the label to the anchor's width, use the following:
+
+width: anchor-size(width);
+
+When the dimensions the anchor and label match (both width in this case), the argument can even be omitted:
+
+width: anchor-size();
+
+#anchor {
+  anchor-name: --a1;
+}
+
+#label {
+  position: absolute;
+  position-anchor: --a1;
+  position-area: bottom;
+width: anchor-size(width);
+}
+
+"
+
+"
+
+The anchor() and anchor-size() functions can be combined with general CSS functions like calc(), min(), and max().
+
+For instance, to set this label's width to triple that of the anchor's, try width: calc(3 * anchor-size(width)).
+
+"
+
+"
+[Interessante este]
+
+Here's a tricky one. Using anchor(), set the left and top edge of the label to align with the first anchor, and the right and bottom edge to align with the second.
+
+#anchor1 { anchor-name: --a1; }
+
+#anchor2 { anchor-name: --a2; }
+
+#label {
+  position: absolute;
+
+    top: anchor(--a1 top);
+    left: anchor(--a1 right);
+    right: anchor(--a2 left);
+    bottom: anchor(--a2 bottom);
+}
+
+"
+"
+
+Please set the top of the label to the maximum of the three anchors' bottom edges. You'll need multiple anchor() calls with a max() for this.
+
+max() takes a comma-separated list of values, and uses the largest value as the value of the property.
+
+"
+
+----------- ChatGPT -----------
+
+Aqui a ideia é exatamente usar **`max()` com múltiplos `anchor()`**, pegando o *maior* dos `bottom` dos três anchors e aplicando isso ao `top` do label.
+
+A solução fica assim:
+
+```css
+#anchor1 { anchor-name: --a1; }
+#anchor2 { anchor-name: --a2; }
+#anchor3 { anchor-name: --a3; }
+
+#label {
+  position: absolute;
+  top: max(
+    anchor(--a1 bottom),
+    anchor(--a2 bottom),
+    anchor(--a3 bottom)
+  );
+}
+```
+
+### O que isso faz
+
+* Cada `anchor(--ax bottom)` retorna a posição da borda inferior do anchor
+* `max()` escolhe o **valor mais baixo na tela** (o maior número)
+* O `#label` sempre começa **abaixo do anchor que estiver mais “para baixo”**
+
+Esse padrão é perfeito para:
+
+* tooltips que não podem sobrepor múltiplos elementos
+* labels que precisam “esperar” o último item da UI
+* layouts responsivos sem JS
+
+Se quiser, dá pra combinar isso com `left`, `inset-inline`, ou até `clamp()` para criar limites inteligentes 👌
+
+
+----------- Fim do ChatGPT -----------
+
+
+---- Outro ChatGPT para sintaxe de anchor ----
+
+A **sintaxe básica do `anchor()`** (CSS Anchor Positioning) é esta:
+
+```css
+anchor(<anchor-name> <side>)
+```
+
+### Partes da sintaxe
+
+1. **`<anchor-name>`**
+   É o nome definido com `anchor-name` no elemento âncora.
+
+```css
+#el {
+  anchor-name: --a;
+}
+```
+
+2. **`<side>`**
+   Qual borda do anchor você quer usar como referência:
+
+* `top`
+* `right`
+* `bottom`
+* `left`
+* `center`
+
+Exemplos:
+
+```css
+top: anchor(--a top);
+left: anchor(--a left);
+right: anchor(--a right);
+bottom: anchor(--a bottom);
+```
+
+---
+
+### Com funções CSS
+
+Você pode usar `anchor()` dentro de funções como:
+
+#### `max()`
+
+```css
+top: max(
+  anchor(--a1 bottom),
+  anchor(--a2 bottom)
+);
+```
+
+#### `min()`
+
+```css
+left: min(
+  anchor(--a left),
+  50vw
+);
+```
+
+#### `calc()`
+
+```css
+top: calc(anchor(--a bottom) + 8px);
+```
+
+---
+
+### Valores implícitos
+
+Se você omitir o lado, o padrão é `center`:
+
+```css
+left: anchor(--a); /* equivalente a anchor(--a center) */
+```
+
+---
+
+### Resumo rápido
+
+```css
+anchor(--nome top | right | bottom | left | center)
+```
+
+Se quiser, posso te mostrar a sintaxe mais nova com `anchor-size()` ou como usar `position-anchor` 👀
+
+---- Fim do ChatGPT para sintaxe de anchor ----
