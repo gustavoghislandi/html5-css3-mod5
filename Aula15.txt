@@ -1,0 +1,5 @@
+🐸 Flexbox Froggy: resposta de todos os desafios
+
+Foi só a resolução. 
+
+Disse que o próximo jogo é o Grid Garden.
