@@ -29,4 +29,4 @@ Isso pode ser confuso, mas align-content determina o espaçamento entre linhas, 
 
 
 -----
-Concluí as 24 fases. Foi bem tranquilo.
+[Concluí as 24 fases. Foi bem tranquilo.]

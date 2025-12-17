@@ -1,0 +1,43 @@
+🥕💧 Jogo para praticar Grid Layout
+
+NOTA: A ordem em que estou colocando as aulas aqui é de acordo com apresentação delas para mim conforme o site do Curso em Vídeo. A ordenação que ele está apresentando nos vídeos é outra.
+
+Jogo da mesma produtora do Flexbox Froggy.
+
+Jogo: Grid Garden.
+
+Site: cssgridgarden.com/#pt-br (path se quiser em pt-br, obviamente)
+
+Aqui ele também resolverá os 5 primeiros.
+
+[Deu de ver o que eu achei que acontecia mas tinha tido problemas por conta de um erro de digitação, que é iniciar em um valor maior e terminar em um valor menor, 'de trás pra frente'. Ou seja, é um posicionamento com index, pois cada linha tem seu número/index normal e reverso]
+
+Desafio, faça os 28 níveis antes de ir para a próxima aula.
+
+----
+Dicas do jogo:
+
+'span' apenas funciona com valores positivos.
+
+Porém, você pode fazer assim:
+
+#garden {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+#water {
+    grid-column-start: span 3; /* AQUI */
+    grid-column-end: 6;        /* E AQUI */
+}
+
+Isso faz o span no sentido reverso, mesmo ele sendo positivo.
+
+Ou seja:
+
+Você ainda pode usar a palavra-chave span com grid-column-start para definir a largura do seu item relativo à posição final.
+
+
+---------
+[Concluí. Demorei um pouco mais do que eu imaginava na última, porque para funcionar precisava ser uma única célula para o veneno e uma única para a água, e eu estava usando a divisão que tinha na terra.]
