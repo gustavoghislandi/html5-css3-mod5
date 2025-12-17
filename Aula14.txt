@@ -1,0 +1,32 @@
+🐸 Jogo que vai te ensinar Flexbox CSS
+
+Jogo: Flexbox Froggy
+
+Site: flexboxfroggy.com/#pt-br  (path em pt-br, obviamente)
+
+É para assistir essa aula e depois o desafio é realizar as fases restantes.
+
+--------
+Assim como no Grid Layout, 
+
+'align' trata de vertical.
+'justify' trata de horizontal.
+
+É que no Flexbox deve ser em relação ao eixo principal (main-axis).
+
+---
+
+justify → atua no main axis
+
+align → atua no cross axis
+
+[Dicas do jogo abaixo]
+--------------
+'align-self' aceita os mesmos valores que 'align-items' e seus valores são usados para o item específico.
+
+---
+Isso pode ser confuso, mas align-content determina o espaçamento entre linhas, enquanto align-items determina como as linhas como um todo são alinhadas dentro do container. Quando há só uma linha, align-content não tem nenhum efeito.
+
+
+-----
+Concluí as 24 fases. Foi bem tranquilo.
