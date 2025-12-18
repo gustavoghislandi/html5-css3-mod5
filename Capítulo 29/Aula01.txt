@@ -1,0 +1,5 @@
+🏁🏆 Crie seu portfólio do ZERO com HTML5 e CSS3 (Projeto Final)
+
+Ele apresentou por cima o portfólio, e mostrou o grid versão mobile e a desktop (ou não-mobile).
+
+A dica dele agora é fazer o portfólio dele (num exercício guiado, em que você entende) e depois adaptar.
