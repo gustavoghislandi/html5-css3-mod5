@@ -1,0 +1,7 @@
+Preparando seu portfólio: Organizando Arquivos e Repositório do projeto
+
+Criar um repositório no GitHub para o projeto. Deixe público.
+
+GitHub Pages. Vá em pagina_do_projeto > Settings > Pages > Build and Deployment > Branch. Escolha main. > Sabe. Você terá uma URL.
+
+[Minha ideia é fazer por aqui seguindo a sequência das aulas e depois colocar os arquivos em outro repositório.]
