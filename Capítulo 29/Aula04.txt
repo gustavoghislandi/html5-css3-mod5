@@ -1,0 +1,20 @@
+Menu superior do seu portfólio
+
+Após fazer:
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Formação</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Tema</a></li>
+            </ul>
+
+Porque tem margin e padding 0px para o seletor '*', não aparecem os circles das 'li', porém elas ainda estão lá, mesmo não aparecendo em tela. Se você remover o margin e padding 0px você verá elas.
+
+
+Perceber que ele usou para 'transition' os valores [propriedade tempo]:
+
+    transition: background-color 0.5s, color 0.5s;
+
+[Já fui no ChatGPT pegar a sintaxe completa e salvei. Além da propriedade e do tempo, tem a função de tempo e o delay]
