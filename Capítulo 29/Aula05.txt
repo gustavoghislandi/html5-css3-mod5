@@ -1,0 +1,53 @@
+Como adicionar ícones no menu com HTML5 e CSS3
+
+Para encontrar os ícones sem precisar de imagens vá em:
+
+    fontawesome.com
+
+Funciona por acesso completo (fontes pagas) e limitado (fontes gratuitas).
+
+Clique em Start, coloque um e-mail, tem que concordar com os termos de serviço, ele enviará um e-mail de confirmação. Depois você mudará a senha (a partir do e-mail). E umas pequenas perguntas como nome, ano de uso a primeira vez e fonte que você mais gosta. A partir daí, você tem acesso ao Free Kit.
+
+Clique no grupo Free (a menos que você queira acesso ao pago), clique em Next.
+
+Para não ter que pagar, você seleciona o EASIEST (hosted by us), que usará linhas de código em que os itens ficarão hospedados no servidor deles [basicamente uma API de ícones]. Se você quiser hospedar os ícones, usar via gerenciador de pacotes ou baixar eles, é somente com a versão PRO (que é a paga). Depois clique em Next.
+
+Customize seu identificador do Kit (com cor, nome, ícone...). Depois clique em Make my Kit. [É tudo bem intuitivo, na real]
+
+Criado o kit, você vai na aba "Set Up", ela vai fornecer uma URL que só você pode utilizar.
+
+Aí você copia o que foi fornecido e cola dentro das tags 'head' do HTML [abaixo do link de favicon].
+
+A partir disso, você acessa:
+
+    fontawesome.com/icons
+
+E faz uma pesquisa. Por exemplo 'home'. Aí ele mostrará vários ícones, alguns são PRO, outros não. Se clicar no raio que indica FREE, só mostrará os gratuitos. LEMBRANDO QUE VOCê TEM QUE ESTAR LOGADO.
+
+Aí você clica no ícone que vocÊ quer usar, isso abrirá um modal que terá um código para você colocar no código. Tem código HTML e código React. Exemplo:
+
+    <i class="fa-solid fa-house"><i>
+
+(Perceba que o i que antes era usado para itálico em HTML agora serve para ícone.)
+
+Por fim, copie esse código e coloque sobre (ou ao lado) do texto "Home" no seu código. Enfim, onde você quiser que seja um campo de texto.
+
+Ela vai ficar compatível com todas as configurações de estilo que você definiu para o texto anterior.
+
+(Faça as buscas em inglês - meio obvio)
+
+Para o resto do ícones, ele buscou por: 'brain', 'graduation', 'bricks', 'moon' e 'sun' (esse ele vai usar depois, porque é na troca do tema).
+
+    <i class="fa-solid fa-brain"><i>
+
+    <i class="fa-solid fa-graduation-cap"><i>
+
+    <i class="fa-solid fa-trowel-bricks"><i>
+
+    <i class="fa-solid fa-moon"><i>
+
+Para evitar erros ao tentar digitar, é melhor copiar.
+
+Há também lá ícones da redes sociais, como o do Youtube, Instagram e LinkedIn, por exemplo.
+
+A partir de agora, quando você quiser ícones você pode usar o fontawesome. Porém, tem o problema de estar criando uma dependência de um outro serviço, de outro servidor. Dito isso, dificilmente o fontawesome vai ter problema. Se quiser uma alternativa que nunca caia ou versão PRO (como incorporação via CSS), tem que pagar.
