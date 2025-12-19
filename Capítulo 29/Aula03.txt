@@ -1,0 +1,51 @@
+Primeiro passo para construir seu portfólio
+
+Ele disse que o .svg é uma imagem em XML e que é uma imagem vetorizada. [Eu sabia que era vetorizada, mas não que era XML.]
+
+[Por mais que tenha funcionado sem alterar, observar de colocar o type do favicon correto (type="image/svg"), assim: 
+
+<link rel="shortcut icon" href="favicon.svg" type="image/svg">
+
+]
+
+Ele disse que XML é como HTML só que pra outras coisas. [Faz sentido, porque tem as tags.]
+
+
+--- DICA ---
+No VSCode, se você mudar o nome do arquivo .svg para .xml, ao invés de mostrar a imagem, mostrará o código dela.
+
+    E dentro desse XML, tem o path, podem ter mais paths, que vão determinar os vetores (círculos, triângulos...). 
+
+    Aí terá o 'fill' seguindo de um código de cor. É ele quem determina a cor da imagem.
+
+    Dentro das tags <svg></svg>, neste caso, só tem um <path />, mas poderia haver mais.
+
+--- DICA 2 ---
+
+Dentro das tags <svg></svg>, você pode colocar as tags de CSS <style></style> e, por exemplo, estilizar a tag <path /> ou outra com o respectivo seletor, preenchendo coisas como:
+
+    <style>
+        path: {
+            fill: black;
+            stroke: white;
+            stroke-width: 3px;
+        }
+    </style>
+
+Em que o fill é o preenchimento, stroke é o traço (a cor dele), e stroke-width é a espessura do traço.
+
+Esse style é mais limitado que o tradicional porque não é possível fazer ligações externas (um link para um arquivo de estilos, por exemplo). Mas basicamente SVG é XML e XML também aceita CSS dentro.
+
+É possível usar 0.5px em stroke-width, se você achar 1px espesso demais.
+
+Ele disse que existem extensões no VS Code que permitem fazer alterações no svg e tal. 
+
+É interessante usar algum outro editor se você precisar de muitas alterações.
+
+Existem editores de svg e GERADORES DE SVG. Então, por exemplo, você pode pegar a logo da sua empresa e transformar em svg (criando os path).
+
+----
+
+Ele recomenda não ficar abrindo a URL do repositório público até que ele fique pronto, utilize a URL local, para que não ocorra desencontros entre o que você alterar e o que é mostrado.
+
+[O "Em breve..." publicado teria essa função, para já deixar ele público, pronto para alterações, mas ainda não completo.]
