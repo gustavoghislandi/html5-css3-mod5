@@ -1,0 +1,5 @@
+Construindo Layout do topo
+
+A ideia é usar a técnica mobile first.
+
+---- Parei em 5:50
