@@ -2,4 +2,119 @@ Construindo Layout do topo
 
 A ideia é usar a técnica mobile first.
 
----- Parei em 5:50
+Aqui ele usou uma propriedade chamada 'aspect-ratio':
+
+    aspect-ratio: 1/1;
+
+Em que 1/1 é quadrado, 16/9 é horizontal... Dá pra colocar a proporção que quiser.
+
+
+----- ChatGPT sobre 'object-fit e aspect-ratio' -----
+
+Claro! Vou te explicar como funcionam as propriedades `object-fit` e `aspect-ratio` no CSS e também te dar as sintaxes.
+
+### 1. **object-fit**
+
+A propriedade `object-fit` é usada para definir como o conteúdo de um elemento (normalmente uma imagem ou vídeo) deve se ajustar ao seu contêiner. Isso é útil quando você tem um elemento com dimensões fixas e deseja que o conteúdo dentro dele se ajuste de uma forma específica.
+
+#### Sintaxe:
+
+```css
+elemento {
+  object-fit: valor;
+}
+```
+
+#### Valores possíveis:
+
+* **`fill`**: O conteúdo vai preencher o contêiner completamente, mas isso pode distorcer a imagem (caso as proporções da imagem e do contêiner sejam diferentes). Este é o valor padrão.
+* **`contain`**: A imagem ou vídeo será redimensionado para caber completamente dentro do contêiner, sem distorção, mas pode deixar áreas vazias (espaços em branco) ao redor.
+* **`cover`**: A imagem ou vídeo será redimensionado para cobrir todo o contêiner, mantendo a proporção da imagem. Pode cortar parte da imagem para garantir que o contêiner seja preenchido.
+* **`none`**: A imagem não será redimensionada. Ou seja, ela será exibida no seu tamanho original.
+* **`scale-down`**: O conteúdo será redimensionado de acordo com o tamanho do contêiner, mas nunca será maior do que o tamanho original da imagem.
+
+#### Exemplo de uso:
+
+```css
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+```
+
+Aqui, a imagem vai cobrir o tamanho de 100% de largura e 200px de altura do contêiner, mantendo sua proporção. Se necessário, a imagem será cortada para se ajustar.
+
+---
+
+### 2. **aspect-ratio**
+
+A propriedade `aspect-ratio` define a proporção entre a largura e a altura de um elemento. Isso é muito útil para manter a proporção de imagens, vídeos ou qualquer elemento que tenha um formato específico, mesmo quando o tamanho do contêiner mudar.
+
+#### Sintaxe:
+
+```css
+elemento {
+  aspect-ratio: largura / altura;
+}
+```
+
+#### Exemplos de valores:
+
+* **`aspect-ratio: 16 / 9;`**: Isso define a proporção de largura 16 para altura 9 (como em vídeos widescreen).
+* **`aspect-ratio: auto;`**: O valor "auto" permite que o navegador calcule automaticamente a proporção com base no conteúdo.
+
+#### Exemplo de uso:
+
+```css
+.div {
+  width: 300px;
+  aspect-ratio: 16 / 9;
+  background-color: lightblue;
+}
+```
+
+Neste exemplo, a `.div` terá uma largura de 300px, e a altura será ajustada automaticamente para manter a proporção 16:9.
+
+Ou, se você quiser definir uma proporção com base no tamanho do elemento:
+
+```css
+.img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+```
+
+Aqui, a `.img` tem 100% de largura e uma proporção de 4:3 para a altura, e a imagem dentro do contêiner vai se ajustar com `object-fit: cover` para preencher esse espaço.
+
+### Como as duas propriedades podem trabalhar juntas?
+
+Você pode usar `object-fit` junto com `aspect-ratio` para garantir que o conteúdo dentro de um elemento (como uma imagem) seja exibido corretamente, mantendo uma proporção específica e ajustando o conteúdo de forma eficiente.
+
+#### Exemplo combinado:
+
+```css
+.container {
+  width: 300px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden; /* Para esconder qualquer parte que ultrapasse */
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+```
+
+Nesse caso, a `.container` tem uma proporção de 16:9 e a imagem dentro dela se ajusta com `object-fit: cover` para preencher o espaço da melhor maneira possível.
+
+---
+
+Essas duas propriedades são bem poderosas para trabalhar com conteúdo de mídias e design responsivo! Se tiver mais dúvidas ou quiser ver mais exemplos, é só falar.
+
+
+----- Fim do ChatGPT sobre 'object-fit e aspect-ratio' -----
+
+Basicamente aspect-ratio trabalha com largura e altura e object-fit faz o objeto se ajustar ao container. E é possível usar um 'overflow:hidden' (para se algo extravazar, ficar escondido).
