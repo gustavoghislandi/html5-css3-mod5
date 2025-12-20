@@ -1,0 +1,33 @@
+Adicionando vídeo no portifólio
+
+A ideia é colocar um vídeo em que você se apresente, fale do que goste de fazer, áreas em que gosta de trabalhar, dizer que os projetos estão ali abaixo, "sinta-se à vontade", para gerar uma proximidade.
+
+Se você não puder ou não quiser fazer um vídeo, é só seguir adiante com as outras seções.
+
+na seção detalhes será vídeo, skills, formação, projetos, talvez um fale conosco (com formulário, por exemplo).
+
+--
+Ele disse pra botar um comentário indiciando o fim de cada article que tem um id, como <!-- Fim do article#video -->, porém não vejo necessidade. O próprio IDE já indica os pares quando você clica em cima da tag.
+
+Ele disse que ajuda quando o site fica grande.
+--
+
+Quando você tem uma conta do Gmail, automaticamente, você pode criar um canal do Youtube.
+
+Ele criou o vídeo de portifólio de exemplo e colocou como NÃO LISTADO, dentre as opções, que são:
+
+    Privado: somente você pode ver.
+    Não listado: Alguém verá somente com acesso ao link.
+    Público: É acessível via buscador.
+
+Coloque um nome, coloque uma descrição bonitinha, um link onde a pessoa pode encontrar o seu portifólio, porque se ele encontrar o vídeo antes do portifólio, ele pode ir para o portifólio a partir dali.
+
+Em Detalhes do Video é possível colocar várias coisas, Data de Gravação, Local do Vídeo, etc.
+
+Depois de postado, você poderá incorporar o vídeo normalmente.
+
+Ele chamou a atenção para não usar cores explícitas (diretamente como #000000) porque quando tiver que mudar de tema ficaria bem mais complexo de fazer.
+
+-----
+OBS: Nem passou muito tempo de ele ter feito o vídeo e o ícone de handshake que ele usou já não existe, já foi modificado. Dependender de APIs externas, portanto, não é só por disponibilidade de serviço, mas do próprio elemento ainda existir tal como era no início.
+-----
