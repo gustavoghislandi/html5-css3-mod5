@@ -1,0 +1,9 @@
+Área de Formações no Portfólio
+
+Legal para dar um efeito, esta borda somente de um lado.
+
+    border-left:  5px solid var(--destaque-inverso);
+
+----
+
+Se você sentir que não gostou de algo, adapte. Porque você fez todo o curso até aqui, você tem capacidade. [E, sim, eu estou adaptando.]

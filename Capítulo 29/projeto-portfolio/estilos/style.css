@@ -25,10 +25,10 @@
   --texto: #222222;
   --texto-inverso: #ffffff;
   --destaque: #0077ff;
-  --destaque-inverso: #66bbff;
+  --destaque-inverso: #31a2ff;
   --fundo-card: #ffffff;
 
-  --destaque-inverso-transparencia: #66baff4d;
+  --destaque-inverso-transparencia: #31a2ff1f;
 }
 
 body {
@@ -133,7 +133,7 @@ article {
 
 article h2 {
   color: var(--destaque);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .video-container {
@@ -169,6 +169,11 @@ article h2 {
   color: var(--texto);
 }
 
+#skill-container .item:hover .nome {
+  font-size: 1.1em;
+  transition: .1s;
+}
+
 #skill-container .porcent {
   font-weight: bold;
   color: var(--destaque);
@@ -187,6 +192,38 @@ article h2 {
   border-radius: 4px;
 }
 
+#skill-container .item:hover .progresso {
+  background-color: var(--destaque);
+  transition: .3s;
+}
+
+#formacao-container {
+  display: flex;
+  flex-flow: column-reverse;
+  gap: 20px;
+}
+
+#formacao-container .curso{
+  background-color: var(--fundo-principal);
+  border-radius: 8px;
+  border-left:  5px solid var(--destaque-inverso);
+  padding: 5px 10px;
+  transition: border-width 0.1s, border-color 0.5s;
+}
+
+#formacao-container .curso:hover{
+  border-color: var(--destaque);
+  border-left-width: 8px;
+  /* cursor: pointer;  */ /* Se não for clicável, não faz sentido pointer */
+}
+
+#formacao-container .instituicao{
+  color: var(--destaque-inverso);
+}
+
+#formacao-container .curso:hover .instituicao{ /* container:hover e classe filha */
+  color: var(--destaque);
+}
 
 
 @media screen and (min-width: 768px) {
