@@ -1,0 +1,3 @@
+Barras de progresso no seu portfólio
+
+Obs: Ele planejou esta estrutura antes de mostrar ela.
