@@ -1,0 +1,27 @@
+Área de Projetos do seu portfólio
+
+<details></details> faz uma seta clicável que abre (ou oculta ao reclicar) para mais detalhes. Bem legal.
+
+<summary>Saiba mais...</summary> são as tags para definir um título ou rótulo para o conteúdo de <details>.
+
+Exemplo:
+
+    <details>
+    <summary>Veja mais detalhes</summary>
+    <p>Este é um conteúdo adicional que pode ser mostrado ou escondido.</p>
+    </details>
+
+
+Essa combinação de <details> e <summary> é muito útil para FAQs, menus interativos, ou para quando você quiser mostrar informações extras sem desorganizar a página.
+
+Ele sugeriu o que, evidentemente, deve ser feito, que é colocar o link que vai para a página do projeto ao clicar na imagem.
+
+--------
+[Eu fiz alguma adaptações, como use de scale. 
+
+Não gostei muito do que o border-left faz com o resto do container.
+
+Não sei exatamente o motivo, mas dentro do hover width: calc (100% -3px) não funcionou.
+
+Mas, depois de umas 3 horas consegui um resultado que considero satisfatório, em que as letras não tremilicam quando o hover acontece.]
+
