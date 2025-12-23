@@ -1,0 +1,19 @@
+Portfólio Profissional: Sticky Header, Grid e Preparação para Tema
+
+----- ChatGPT sobre height: fit-content; -----
+
+Se você usar `height: fit-content;` junto com `vh` (como `height: 50vh;`), o comportamento será o seguinte:
+
+* **`vh`**: Define a altura do elemento em relação à altura da janela de visualização (viewport). 1vh é igual a 1% da altura da janela.
+* **`fit-content`**: Ajusta a altura do elemento para o tamanho do conteúdo.
+
+No entanto, quando você define uma altura usando `vh` (ex: `50vh`), ela será aplicada de forma **fixa**, ou seja, o elemento terá a altura correspondente a 50% da altura da janela.
+
+Se o conteúdo do elemento for maior do que a altura definida com `vh`, o `fit-content` será **ignorando** o valor de `vh`, e o conteúdo "forçará" a altura para se ajustar a ele, podendo ultrapassar o valor definido pelo `vh`.
+
+Então, o que ocorre é:
+
+1. **Se o conteúdo for menor ou igual à altura definida com `vh`**: O `vh` vai prevalecer.
+2. **Se o conteúdo for maior que o valor de `vh`**: A altura do elemento será determinada pelo `fit-content`, que pode fazer o elemento ultrapassar o valor de `vh`.
+
+----- Fim do ChatGPT sobre height: fit-content; -----
