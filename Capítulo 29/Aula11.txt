@@ -1,0 +1,6 @@
+Como Tornar o Header Fixo com CSS e Rolagem Suave em JavaScript
+
+    position: sticky;
+    top: 0;
+
+Para funcionar, ele precisa do top: 0; 
