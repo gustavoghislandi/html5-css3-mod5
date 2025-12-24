@@ -1,0 +1,3 @@
+Seu Portfólio no Modo Escuro: Design Mais Moderno e Elegante
+
+Ele usou LocalStorage para salvar o tema.
