@@ -1,3 +1,7 @@
 Seu Portfólio no Modo Escuro: Design Mais Moderno e Elegante
 
 Ele usou LocalStorage para salvar o tema.
+
+
+-------------------
+Curso finalizado.  Grande jornada até aqui. O professor Guanabara tem uma ótima didática.
