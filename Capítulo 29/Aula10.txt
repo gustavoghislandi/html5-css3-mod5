@@ -25,3 +25,24 @@ Não sei exatamente o motivo, mas dentro do hover width: calc (100% -3px) não f
 
 Mas, depois de umas 3 horas consegui um resultado que considero satisfatório, em que as letras não tremilicam quando o hover acontece.]
 
+---
+
+Voltei para adicionar uma nota sobre o tremelicar. Isso chama-se FLICKER. 
+
+"
+"Flicker" em programação refere-se a um problema visual indesejado onde elementos da interface do usuário (IU) ou a tela inteira piscam rapidamente ou tremulam [1]. Esse efeito geralmente ocorre quando o conteúdo da tela é atualizado ou redesenhado múltiplas vezes em um curto período, causando instabilidade visual perceptível ao olho humano [1].
+
+
+Causas comuns:
+
+    Redesenho excessivo: Causado por atualizações de tela frequentes e desnecessárias ou por renderização repetida de elementos na mesma área [1].
+    Problemas de buffer duplo: Em sistemas gráficos, a ausência de um mecanismo de "buffer duplo" (double buffering) pode levar ao flicker. Com buffer duplo, a imagem é desenhada em um buffer de memória fora da tela e só então copiada para a tela de uma vez, garantindo uma transição suave. Sem isso, o usuário pode ver a imagem sendo desenhada linha por linha, causando o efeito de piscar [1].
+    Manipulação incorreta do DOM (em desenvolvimento web): Operações demoradas ou múltiplas manipulações no DOM (Document Object Model) do navegador podem causar renderizações parciais ou atrasos visuais, resultando em flicker [1]. 
+
+Soluções e prevenção:
+
+    Implementação de Double Buffering: Uma técnica fundamental em gráficos para garantir renderização suave [1].
+    Otimização do código de renderização: Redução da frequência de atualizações desnecessárias da IU.
+    Uso de técnicas modernas de renderização web: Aproveitamento de APIs como requestAnimationFrame para sincronizar atualizações visuais com o ciclo de atualização do navegador, resultando em animações e transições mais suaves [1].
+    Aceleração de hardware: Utilização de recursos da GPU para renderizar elementos, aliviando a carga da CPU e melhorando o desempenho visual.
+"
