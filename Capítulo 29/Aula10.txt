@@ -27,6 +27,7 @@ Mas, depois de umas 3 horas consegui um resultado que considero satisfatório, e
 
 ---
 
+[
 Voltei para adicionar uma nota sobre o tremelicar. Isso chama-se FLICKER. 
 
 "
@@ -46,3 +47,12 @@ Soluções e prevenção:
     Uso de técnicas modernas de renderização web: Aproveitamento de APIs como requestAnimationFrame para sincronizar atualizações visuais com o ciclo de atualização do navegador, resultando em animações e transições mais suaves [1].
     Aceleração de hardware: Utilização de recursos da GPU para renderizar elementos, aliviando a carga da CPU e melhorando o desempenho visual.
 "
+
+Por exemplo, em React:
+
+    useLayoutEffect, que roda após atualização do DOM, antes do paint; e
+
+    useEffect, que roda depois do paint, no final do ciclo de renderização;
+
+objetivam garantir que efeitos que dependem do DOM não causem flicker ou erro de layout.
+]
